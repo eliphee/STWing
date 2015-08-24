@@ -26,40 +26,40 @@
 <captains>
 	<captain>
 		<property name="id" value="1" />
-		<property name="type" value="Captain" />
 		<property name="name" value="Jean-Luc Picard" />
 		<property name="faction" value="Federation" />
 		<property name="unique" value="true" />
 		<property name="skill" value="9" />
 		<property name="talentSlots" value="1" />
 		<property name="squadronPoints" value="6" />
+		<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
+		<property name="restriction" value="" />
+		<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+		<property name="restrictionPenalty" value="" />
 		<abilities>
 			<property class="ability">
-				<property name="activation" value="passive" />
-				<property name="phase" value="ActivationPhase" />
-				<property name="text" value="Each round, you may perform one of the following actions as a free action:%n%e%t%s%b%nYou may use this Action even if your ship does not have it in the Action bar." />
-			</property>
-		</abilities>
-	</captain>
-	<captain>
-		<property name="id" value="2" />
-		<property name="type" value="Captain" />
-		<property name="name" value="Jean-Luc Picard" />
-		<property name="faction" value="Federation" />
-		<property name="unique" value="true" />
-		<property name="skill" value="8" />
-		<property name="talentSlots" value="1" />
-		<property name="squadronPoints" value="5" />
-		<abilities>
-			<property class="ability">
-				<property name="activation" value="passive" />
-				<property name="phase" value="Always" />
-				<property name="text" value="Add 1 %sc, %st, %sw or %se Upgrade to your Upgrade Bar (your choice)." />
-			</property>
-			<property class="ability">
-				<property name="activation" value="passive" />
-				<property name="phase" value="Always" />
-				<property name="text" value="Add 1 %sc, %st, %sw or %se Upgrade to your Upgrade Bar (your choice)." />
+			<!-- costs: 	(X: player choice or X: fix number)
+							%p = no costs
+							%d = disable this card
+							X%do = disable other card -> %CARDTYPE or %CARDNAME
+							%di = discard this card
+							X%dio = discard other card -> %CARDTYPE or %CARDNAME
+			-->
+				<property name="costs" value="" />
+			
+			<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+								passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+								reaction = wird durch den "trigger" definiert
+			-->
+				<property name="activation" value="passive" />				
+				<property name="phase" value="ActionPhase" />
+			<!-- %ship, %range, %rearArc, %frontArc, %radiusXXX, %action -->
+				<property name="trigger" value="%AuxToken0" />
+			<!-- %AuxTokenX, %attackDieX -->
+				<property name="effect" value="%choose1(%ae%at%as%ab)" /> 
+				<property name="text" value="Each round you may perform one of the following actions as a free action:%n
+												%ae %at %as %ab%n
+												You may use this Action even if your ship dows not have it in the Action bar." />
 			</property>
 		</abilities>
 	</captain>

@@ -26,17 +26,32 @@
 	%ats = Attack: Secondary Attack
 -->
 <shipAbilities>
-	<ability>
+	<shipAbility>
 		<property name="id" value="011" />
 		<!--<property name="skill" value="9" />-->
 		<abilities>
 			<property class="ability">
-			<!-- rework -->
-				<property name="activation" value="passive" />
+			<!-- costs: 	(X: player choice or X: fix number)
+							%p = no costs
+							%d = disable this card
+							X%do = disable other card -> %CARDTYPE or %CARDNAME
+							%di = discard this card
+							X%dio = discard other card -> %CARDTYPE or %CARDNAME
+			-->
+				<property name="costs" value="" />
+			
+			<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+								passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+								reaction = wird durch den "trigger" definiert
+			-->
+				<property name="activation" value="attack" />				
 				<property name="phase" value="AttackPhase" />
+			<!-- %ship, %range, %rearArc, %frontArc, %radiusXXX -->
+				<property name="trigger" value="%enemy%range12%radius360" />
+			<!-- %AuxTokenX, %attackDieX -->
+				<property name="effect" value="%attackDie3" /> 
 				<property name="text" value="Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice." />
-				<property name="effect" value="%ats: Range '2', Attack '3', Radius '360', Type 'secondary'" />
 			</property>
 		</abilities>
-	</ability>
+	</shipAbility>
 </shipAbilities>	

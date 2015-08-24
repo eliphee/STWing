@@ -62,7 +62,7 @@ namespace AssemblyCSharp
 
 		ShipLoader()
 		{
-			reader = XmlReader.Create (Application.dataPath + "\\Assets\\GameData\\Data\\Ships.xml");
+			//reader = XmlReader.Create (Application.dataPath + "\\Assets\\GameData\\Data\\Ships.xml");
 		}
 
 		public Ship LoadShip(int id)
