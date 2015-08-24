@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	%n = NewLine
+	%a = 'ACTION:' condition
+	%ae = Action: Evade
+	%at = Action: Target-Lock
+	%as = Action: Scanning
+	%ab = Action: Battle Stations
+	%ac = Action: Cloak
+	%aq = Action: Sensor Echo
+	%sc = Slot: Crew
+	%st = Slot: Tech
+	%sw = Slot: Weapon
+	%se = Slot: Elite Talent
+	%ch = Combat: Hit
+	%cc = Combat: Critical
+	%ce = Combat: Evade
+	%ms = Maneuver: Straight
+	%mbl = Maneuver: Bank Left
+	%mbr = Maneuver: Bank Right
+	%mtl = Maneuver: Turn Left
+	%mtr = Maneuver: Turn Right
+	%mca = Maneuver: Come About
+	%mfa = Maneuver: Full Astern
+-->
+<weapons>
+	<weapon>
+		<property name="id" value="1" />
+		<property name="type" value="Weapon" />
+		<property name="name" value="Photon Torpedo" />
+		<property name="faction" value="Federation" />
+		<property name="unique" value="false" />
+		<!--<property name="skill" value="9" />-->
+		<property name="talentSlots" value="1" />
+		<property name="squadronPoints" value="5" />
+		<abilities>
+			<property class="ability">
+			<!-- rework -->
+				<property name="activation" value="passive" />
+				<property name="phase" value="AttackPhase" />
+				<property name="text" value="..." />
+			</property>
+		</abilities>
+	</weapon>
+</weapons>	

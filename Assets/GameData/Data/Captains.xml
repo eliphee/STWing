@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	%n = NewLine
+	%a = 'ACTION:' condition
+	%ae = Action: Evade
+	%at = Action: Target-Lock
+	%as = Action: Scanning
+	%ab = Action: Battle Stations
+	%ac = Action: Cloak
+	%aq = Action: Sensor Echo
+	%sc = Slot: Crew
+	%st = Slot: Tech
+	%sw = Slot: Weapon
+	%se = Slot: Elite Talent
+	%ch = Combat: Hit
+	%cc = Combat: Critical
+	%ce = Combat: Evade
+	%ms = Maneuver: Straight
+	%mbl = Maneuver: Bank Left
+	%mbr = Maneuver: Bank Right
+	%mtl = Maneuver: Turn Left
+	%mtr = Maneuver: Turn Right
+	%mca = Maneuver: Come About
+	%mfa = Maneuver: Full Astern
+-->
+<captains>
+	<captain>
+		<property name="id" value="1" />
+		<property name="type" value="Captain" />
+		<property name="name" value="Jean-Luc Picard" />
+		<property name="faction" value="Federation" />
+		<property name="unique" value="true" />
+		<property name="skill" value="9" />
+		<property name="talentSlots" value="1" />
+		<property name="squadronPoints" value="6" />
+		<abilities>
+			<property class="ability">
+				<property name="activation" value="passive" />
+				<property name="phase" value="ActivationPhase" />
+				<property name="text" value="Each round, you may perform one of the following actions as a free action:%n%e%t%s%b%nYou may use this Action even if your ship does not have it in the Action bar." />
+			</property>
+		</abilities>
+	</captain>
+	<captain>
+		<property name="id" value="2" />
+		<property name="type" value="Captain" />
+		<property name="name" value="Jean-Luc Picard" />
+		<property name="faction" value="Federation" />
+		<property name="unique" value="true" />
+		<property name="skill" value="8" />
+		<property name="talentSlots" value="1" />
+		<property name="squadronPoints" value="5" />
+		<abilities>
+			<property class="ability">
+				<property name="activation" value="passive" />
+				<property name="phase" value="Always" />
+				<property name="text" value="Add 1 %sc, %st, %sw or %se Upgrade to your Upgrade Bar (your choice)." />
+			</property>
+			<property class="ability">
+				<property name="activation" value="passive" />
+				<property name="phase" value="Always" />
+				<property name="text" value="Add 1 %sc, %st, %sw or %se Upgrade to your Upgrade Bar (your choice)." />
+			</property>
+		</abilities>
+	</captain>
+</captains>	

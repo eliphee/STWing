@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	%n = NewLine
+	%a = 'ACTION:' condition
+	%ae = Action: Evade
+	%at = Action: Target-Lock
+	%as = Action: Scanning
+	%ab = Action: Battle Stations
+	%ac = Action: Cloak
+	%aq = Action: Sensor Echo
+	%sc = Slot: Crew
+	%st = Slot: Tech
+	%sw = Slot: Weapon
+	%se = Slot: Elite Talent
+	%ch = Combat: Hit
+	%cc = Combat: Critical
+	%ce = Combat: Evade
+	%ms = Maneuver: Straight
+	%mbl = Maneuver: Bank Left
+	%mbr = Maneuver: Bank Right
+	%mtl = Maneuver: Turn Left
+	%mtr = Maneuver: Turn Right
+	%mca = Maneuver: Come About
+	%mfa = Maneuver: Full Astern
+-->
+<techUpgrades>
+	<techUpgrade>
+		<property name="id" value="1" />
+		<property name="type" value="Upgrade" />
+		<property name="name" value="The Doctor" />
+		<property name="faction" value="Federation" />
+		<property name="unique" value="true" />
+		<property name="skill" value="9" />
+		<property name="talentSlots" value="1" />
+		<property name="squadronPoints" value="3" />
+		<abilities>
+			<property class="ability">
+				<property name="activation" value="action" />
+				<property name="phase" value="ActionPhase" />
+				<property name="text" value="%a: Remove all Disabled Upgrade Tokens from your %sc Upgrades." />
+			</property>
+		</abilities>
+	</techUpgrade>
+</techUpgrades>	

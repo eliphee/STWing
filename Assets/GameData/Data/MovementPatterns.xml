@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<patterns>
+	<pattern id="1">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="2" bearing="ComeAbout" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="ComeAbout" difficulty="white" />
+	</pattern>
+	<pattern id="2">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="2" bearing="ComeAbout" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="3" bearing="ComeAbout" difficulty="red" />
+	</pattern>
+	<pattern id="3">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="3" bearing="ComeAbout" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="4">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="-2" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="5">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="3" bearing="ComeAbout" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="6">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="ComeAbout" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="7">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="-2" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="8">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="9">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="green" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="5" bearing="Straight" difficulty="white" />
+		<maneuver speed="6" bearing="Straight" difficulty="red" />
+		<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="10">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="2" bearing="ComeAbout" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="11">
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="green" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="5" bearing="Straight" difficulty="white" />
+		<maneuver speed="6" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="12">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="13">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="green" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="5" bearing="Straight" difficulty="white" />
+		<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
+		<maneuver speed="-2" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="14">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="4" bearing="ComeAbout" difficulty="red" />
+		<maneuver speed="5" bearing="Straight" difficulty="white" />
+		<maneuver speed="6" bearing="Straight" difficulty="white" />
+	</pattern>
+	<pattern id="15">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="1" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="1" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="red" />
+		<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
+		<maneuver speed="-2" bearing="FullAstern" difficulty="red" />
+	</pattern>
+	<pattern id="16">
+		<maneuver speed="1" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="Straight" difficulty="green" />
+		<maneuver speed="2" bearing="LeftBank" difficulty="green" />
+		<maneuver speed="2" bearing="RightBank" difficulty="green" />
+		<maneuver speed="3" bearing="Straight" difficulty="white" />
+		<maneuver speed="3" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="3" bearing="LeftTurn" difficulty="white" />
+		<maneuver speed="3" bearing="RightBank" difficulty="white" />
+		<maneuver speed="3" bearing="RightTurn" difficulty="white" />
+		<maneuver speed="4" bearing="Straight" difficulty="white" />
+		<maneuver speed="4" bearing="LeftBank" difficulty="white" />
+		<maneuver speed="4" bearing="RightBank" difficulty="white" />
+		<maneuver speed="5" bearing="Straight" difficulty="white" />
+		<maneuver speed="6" bearing="Straight" difficulty="white" />
+	</pattern>
+</patterns>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	%n = NewLine
+	%a = 'ACTION:' condition
+	%ae = Action: Evade
+	%at = Action: Target-Lock
+	%as = Action: Scanning
+	%ab = Action: Battle Stations
+	%ac = Action: Cloak
+	%aq = Action: Sensor Echo
+	%sc = Slot: Crew
+	%st = Slot: Tech
+	%sw = Slot: Weapon
+	%se = Slot: Elite Talent
+	%ch = Combat: Hit
+	%cc = Combat: Critical
+	%ce = Combat: Evade
+	%ms = Maneuver: Straight
+	%mbl = Maneuver: Bank Left
+	%mbr = Maneuver: Bank Right
+	%mtl = Maneuver: Turn Left
+	%mtr = Maneuver: Turn Right
+	%mca = Maneuver: Come About
+	%mfa = Maneuver: Full Astern
+	
+	%ats = Attack: Secondary Attack
+-->
+<shipAbilities>
+	<ability>
+		<property name="id" value="011" />
+		<!--<property name="skill" value="9" />-->
+		<abilities>
+			<property class="ability">
+			<!-- rework -->
+				<property name="activation" value="passive" />
+				<property name="phase" value="AttackPhase" />
+				<property name="text" value="Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice." />
+				<property name="effect" value="%ats: Range '2', Attack '3', Radius '360', Type 'secondary'" />
+			</property>
+		</abilities>
+	</ability>
+</shipAbilities>	
