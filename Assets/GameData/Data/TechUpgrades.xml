@@ -22,22 +22,55 @@
 	%mtr = Maneuver: Turn Right
 	%mca = Maneuver: Come About
 	%mfa = Maneuver: Full Astern
+	
+	Passive (while phases)
+	Action (always in action Phase)
+	Reaction
 -->
 <techUpgrades>
 	<techUpgrade>
 		<property name="id" value="1" />
-		<property name="type" value="Upgrade" />
-		<property name="name" value="The Doctor" />
-		<property name="faction" value="Federation" />
-		<property name="unique" value="true" />
-		<property name="skill" value="9" />
-		<property name="talentSlots" value="1" />
-		<property name="squadronPoints" value="3" />
+		<property name="name" value="Positron Beam" />
+		<!-- %Federation%Klingon = 2 Fraktionen // %Federation§Vulcan = Nur eine Fraktion, aber für die andere gleich teuer -->
+		<property name="faction" value="%Federation" />
+		<property name="unique" value="false" />
+		<property name="shipUnique" value="false" />
+		<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
+		<property name="squadronPoints" value="2" />
+		<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
+		<property name="restriction" value="" />
+		<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+		<property name="restrictionPenalty" value="" />
+		
+		<!-- 
+		check if action possible (check costs)
+		Example trigger: 	if true = Ship not cloaked
+							highlight every enemy Ship in Range 0-2 AND not cloaked AND active shields = 0
+		Example costs: 		%di AND Xdio, %CARDNAME		
+		-->
 		<abilities>
 			<property class="ability">
-				<property name="activation" value="action" />
-				<property name="phase" value="ActionPhase" />
-				<property name="text" value="%a: Remove all Disabled Upgrade Tokens from your %sc Upgrades." />
+			<!-- costs: 	(X: player choice or X: fix number)
+							%p = no costs
+							%d = disable this card
+							X%do = disable other card -> %CARDTYPE or %CARDNAME
+							%di = discard this card
+							X%dio = discard other card -> %CARDTYPE or %CARDNAME
+			-->
+				<property name="costs" value="%di" />
+			
+			<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+								passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+								reaction = wird durch den "trigger" definiert
+			-->
+				<property name="activation" value="passive" />				
+				<property name="phase" value="Planning Phase" />
+			<!-- %ship, %range,  -->
+				<property name="trigger" value="%range1" />
+			<!-- %AuxTokenX -->
+				<property name="effect" value="%AuxToken1" /> 
+				<property name="text" value="During the Planning Phase, you may discard this Upgrade to target a ship at Range 1 of your ship. %n
+												That ship immediately receives an Auxiliary Power Token." />
 			</property>
 		</abilities>
 	</techUpgrade>
