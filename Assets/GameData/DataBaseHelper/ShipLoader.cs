@@ -8,7 +8,7 @@ public class ShipLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		ShipColl sc = ShipColl.Load(path);
+		ShipCollection sc = ShipCollection.Load(path);
 
 		foreach (ShipClass ship in sc.shipClass)
 		{

@@ -21,11 +21,11 @@ public class ShipColl {
 			{
 				if (reader.HasAttributes)
 				{
-					ship = new ShipClass();
-					ship.id = Convert.ToInt32(reader.GetAttribute("id"));
+					//ship = new ShipClass();
+					//ship.id = Convert.ToInt32(reader.GetAttribute("id"));
 					
 					
-					ships.shipClass.Add (ship);
+					//ships.shipClass.Add (ship);
 				}
 				
 			}

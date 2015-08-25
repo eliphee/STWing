@@ -1,4 +1,6 @@
-﻿using System;
+﻿using UnityEngine;
+using System.Collections;
+using System;
 using System.Xml;
 
 namespace AssemblyCSharp
@@ -54,29 +56,6 @@ namespace AssemblyCSharp
 //		public void RemoveShield (int amount);
 //		public void DisableShield (int amount);
 
-	}
-
-	public class ShipLoader : Ship
-	{
-		XmlReader reader;
-
-		ShipLoader()
-		{
-			//reader = XmlReader.Create (Application.dataPath + "\\Assets\\GameData\\Data\\Ships.xml");
-		}
-
-		public Ship LoadShip(int id)
-		{
-
-
-
-			return new Ship();
-		}
-
-		public Ship[] LoadAll()
-		{
-			return null;
-		}
 	}
 }
 

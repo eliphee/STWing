@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 public class ShipClass {
 
 	[XmlAttribute("id")]
-	public int id;
+	public float id;
 
 	[XmlElement("shipName")]
 	public string shipName;
@@ -21,25 +21,25 @@ public class ShipClass {
 	public bool unique;
 
 	[XmlElement("squadronPoints")]
-	public int squadronPoints;
+	public float squadronPoints;
 	
 	[XmlElement("weapon")]
-	public int weapon;
+	public float weapon;
 	
 	[XmlElement("agility")]
-	public int agility;
+	public float agility;
 	
 	[XmlElement("hull")]
-	public int hull;
+	public float hull;
 
 	[XmlElement("shields")]
-	public int shields;
+	public float shields;
 	
 	[XmlElement("firingArc")]
-	public int firingArc;
+	public float firingArc;
 	
 	[XmlElement("rearArc")]
-	public int rearArc;
+	public float rearArc;
 
 	//Action Bar und Upgrades fehlen
 
@@ -47,11 +47,11 @@ public class ShipClass {
 	public string ability;
 
 	[XmlElement("abilityID")]
-	public int abilityID;
+	public float abilityID;
 	
 	[XmlElement("maneuverTemplate")]
-	public int maneuverTemplate;
+	public float maneuverTemplate;
 	
 	[XmlElement("baseSize")]
-	public int baseSize;
+	public float baseSize;
 }
