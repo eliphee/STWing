@@ -25,9 +25,20 @@
 	
 	%ats = Attack: Secondary Attack
 -->
-<shipAbilities>
-	<shipAbility>
-		<shipSpecial id="011">
+<captainUpgrades>
+	<captainUpgrade>
+		<captainSpecial id="1">
+			<name>Feint</name>
+			<!-- %Federation%Klingon = 2 Fraktionen // %Federation$Vulcan = Nur eine Fraktion, aber für die andere gleich teuer -->
+			<faction>%Federation</faction>
+			<unique>false</unique>
+			<shipUnique>false</shipUnique>
+			<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
+			<squadronPoints>4</squadronPoints>
+			<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
+			<restriction></restriction>
+			<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+			<restrictionPenalty></restrictionPenalty>
 			<abilities>
 				<ability>
 					<!-- costs: 	(X: player choice or X: fix number)
@@ -37,21 +48,21 @@
 									%di = discard this card
 									X%dio = discard other card -> %CARDTYPE or %CARDNAME
 					-->
-					<costs></costs>
+					<costs>%di</costs>
 						
 					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
 										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
 										reaction = wird durch den "trigger" definiert
 					-->
-					<activation>attack</activation>				
-					<phase>AttackPhase</phase>
+					<activation>action</activation>				
+					<phase>ActionPhase</phase>
 					<!-- %ship, %range, %rearArc, %frontArc, %radiusXXX -->
-					<trigger>%enemy%range12%radius360</trigger>
+					<trigger>%enemy%range23%radius360</trigger>
 					<!-- %AuxTokenX, X%YYYSlot(YYY=Type), X%reduceDefense, %attackDieX  -->
-					<effect>%attackDie3</effect> 
-					<text>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.</text>
+					<effect>%enemy%lessDefenseDice2</effect> 
+					<text>%a: Discard this Upgrade to target a ship at Range 2-3. If you attack that ship this round, it rols 2 less defense dice.</text>
 				</ability>
 			</abilities>
-		</shipSpecial>
-	</shipAbility>
-</shipAbilities>	
+		</captainSpecial>
+	</captainUpgrade>
+</captainUpgrades>	
