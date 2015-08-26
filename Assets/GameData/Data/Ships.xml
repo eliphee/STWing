@@ -27,18 +27,359 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.</ability>
+			<ability>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.
+			</ability>
 			<abilityID>011</abilityID>
 			<maneuverTemplate>13</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
-		<ship id="2"> <!-- U.S.S. Enterprise-D -->
-			<shipName>U.S.S. Enterprise-C</shipName>
+		<ship id="2"> <!-- Galaxy Class -->
+			<shipName>Federation Starship</shipName>
 			<shipClass>Galaxy Class</shipClass>
 			<faction>Federation</faction>
-			<unique>true</unique>
-			<squadronPoints>28</squadronPoints>
+			<unique>false</unique>
+			<squadronPoints>26</squadronPoints>
 			<weapon>4</weapon>
+			<agility>1</agility>
+			<hull>5</hull>
+			<shields>3</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>3</crewUpgrades>
+				<techUpgrades>0</techUpgrades>
+			<!-- upgrades -->
+			<ability></ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>13</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="3"> <!-- U.S.S. Excelsior -->
+			<shipName>U.S.S. Excelsior</shipName>
+			<shipClass>Excelsior Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>26</squadronPoints>
+			<weapon>3</weapon>
+			<agility>1</agility>
+			<hull>5</hull>
+			<shields>4</shields>
+			<firingArc>180</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>3</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>After you move, if no enemy ships are in within Range 1 of your ship, you may perform a %as Action as a free Action.
+			</ability>
+			<abilityID>021</abilityID>
+			<maneuverTemplate>7</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="4"> <!-- U.S.S. Hood -->
+			<shipName>U.S.S. Hood</shipName>
+			<shipClass>Excelsior Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>26</squadronPoints>
+			<weapon>3</weapon>
+			<agility>1</agility>
+			<hull>5</hull>
+			<shields>4</shields>
+			<firingArc>180</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>3</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>When you initiate an attack against a cloaked ship, roll +1 attack die.
+			</ability>
+			<abilityID>022</abilityID>
+			<maneuverTemplate>7</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="5"> <!-- Excelsior Class -->
+			<shipName>Federation Starship</shipName>
+			<shipClass>Excelsior Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>24</squadronPoints>
+			<weapon>3</weapon>
+			<agility>1</agility>
+			<hull>5</hull>
+			<shields>3</shields>
+			<firingArc>180</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>7</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="6"> <!-- U.S.S. Reliant -->
+			<shipName>U.S.S. Reliant</shipName>
+			<shipClass>Miranda Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>20</squadronPoints>
+			<weapon>2</weapon>
+			<agility>2</agility>
+			<hull>3</hull>
+			<shields>3</shields>
+			<firingArc>180</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>0</techUpgrades>
+			<!-- upgrades -->
+			<ability>You gain +1 attack die when firing at Range 1.
+			</ability>
+			<abilityID>031</abilityID>
+			<maneuverTemplate>4</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="7"> <!-- Miranda Class -->
+			<shipName>Federation Starship</shipName>
+			<shipClass>Miranda Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>18</squadronPoints>
+			<weapon>2</weapon>
+			<agility>2</agility>
+			<hull>3</hull>
+			<shields>2</shields>
+			<firingArc>180</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>1</crewUpgrades>
+				<techUpgrades>0</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>4</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="8"> <!-- U.S.S. Defiant -->
+			<shipName>U.S.S. Defiant</shipName>
+			<shipClass>Defiant Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>24</squadronPoints>
+			<weapon>3</weapon>
+			<agility>2</agility>
+			<hull>3</hull>
+			<shields>4</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>2</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>When defending, convert all of your opponent's %cc results into %ch results.
+			</ability>
+			<abilityID>041</abilityID>
+			<maneuverTemplate>6</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="9"> <!-- Defiant Class -->
+			<shipName>Federation Starship</shipName>
+			<shipClass>Defiant Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>22</squadronPoints>
+			<weapon>3</weapon>
+			<agility>2</agility>
+			<hull>3</hull>
+			<shields>3</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>2</weaponUpgrades>
+				<crewUpgrades>1</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>6</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="10"> <!-- U.S.S. Prometheus -->
+			<shipName>U.S.S. Prometheus</shipName>
+			<shipClass>Prometheus Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>30</squadronPoints>
+			<weapon>5</weapon>
+			<agility>1</agility>
+			<hull>4</hull>
+			<shields>5</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>2</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>2</techUpgrades>
+			<!-- upgrades -->
+			<ability>%a If you performed a %ms Maneuver this round, immediately perform an additional 1%ms or 2%ms Maneuver.
+			</ability>
+			<abilityID>051</abilityID>
+			<maneuverTemplate>16</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="11"> <!-- Prometheus Class -->	
+			<shipName>Federation Starship</shipName>
+			<shipClass>Prometheus Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>28</squadronPoints>
+			<weapon>5</weapon>
+			<agility>1</agility>
+			<hull>4</hull>
+			<shields>4</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>2</weaponUpgrades>
+				<crewUpgrades>1<crewUpgrades>
+				<techUpgrades>2</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>16</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="12"> <!-- U.S.S. Enterprise NCC-1701-E -->	
+			<shipName>U.S.S. Enterprise NCC-1701-E</shipName>
+			<shipClass>Sovereign Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>32</squadronPoints>
+			<weapon>5</weapon>
+			<agility>1</agility>
+			<hull>5</hull>
+			<shields>5</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>2</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>You may fire a Torpedo at an enemy ship without needing a Target Lock. If you do so, plance an Auxiliary Power Token beside your ship.
+			</ability>
+			<abilityID>061</abilityID>
+			<maneuverTemplate>9</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="13"> <!-- Sovereign Class  -->	
+			<shipName>Federation Starship</shipName>
+			<shipClass>Sovereign Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>30</squadronPoints>
+			<weapon>5</weapon>
 			<agility>1</agility>
 			<hull>5</hull>
 			<shields>4</shields>
@@ -53,15 +394,139 @@
 				<shift>false</shift>
 			<!-- actionBar -->
 			<!-- upgrades -->
-				<weaponUpgrades>2</weaponUpgrades>
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>9</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="14"> <!-- U.S.S. Voyager -->	
+			<shipName>U.S.S. Voyager</shipName>
+			<shipClass>Intrepid Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>30</squadronPoints>
+			<weapon>4</weapon>
+			<agility>2</agility>
+			<hull>4</hull>
+			<shields>5</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>3</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>Instead of making a normal attack with your Primary Weapon, you may fire in any direction at Range 1-2 with 4 attack dice. If you do so, place an Auxiliary Power Token beside your ship.
+			</ability>
+			<abilityID>071</abilityID>
+			<maneuverTemplate>11</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="15"> <!-- Intrepid Class -->
+			<shipName>Federation Starship</shipName>
+			<shipClass>Intrepid Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>28</squadronPoints>
+			<weapon>4</weapon>
+			<agility>2</agility>
+			<hull>4</hull>
+			<shields>4</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>2</crewUpgrades>
+				<techUpgrades>1</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>11</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
+		<ship id="16"> <!-- Enterprise NX-01 -->
+			<shipName>Federation Starship</shipName>
+			<shipClass>Intrepid Class</shipClass>
+			<faction>Federation</faction>
+			<unique>true</unique>
+			<squadronPoints>16</squadronPoints>
+			<weapon>4</weapon>
+			<agility>2</agility>
+			<hull>4</hull>
+			<shields>4</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.</ability>
-			<abilityID>011</abilityID>
-			<maneuverTemplate>13</maneuverTemplate>
+			<ability>You may equip the Enhanced Hull Plating %st Upgrade to your ship for free even if it exceeds your ship's restrictions.
+			</ability>
+			<abilityID>081</abilityID>
+			<maneuverTemplate>2</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
-		
+		<ship id="17"> <!-- Federation NX Class -->	
+			<shipName>Federation Starship</shipName>
+			<shipClass>Federation NX Class</shipClass>
+			<faction>Federation</faction>
+			<unique>false</unique>
+			<squadronPoints>14</squadronPoints>
+			<weapon>2</weapon>
+			<agility>3</agility>
+			<hull>3</hull>
+			<shields>0</shields>
+			<firingArc>90</firingArc>
+			<rearArc>90</rearArc>
+			<!-- actionBar --> 
+				<evade>true</evade>
+				<targetLock>true</targetLock>
+				<scanning>true</scanning>
+				<battleStations>true</battleStations>
+				<cloak>false</cloak>
+				<shift>false</shift>
+			<!-- actionBar -->
+			<!-- upgrades -->
+				<weaponUpgrades>1</weaponUpgrades>
+				<crewUpgrades>1</crewUpgrades>
+				<techUpgrades>0</techUpgrades>
+			<!-- upgrades -->
+			<ability>
+			</ability>
+			<abilityID></abilityID>
+			<maneuverTemplate>2</maneuverTemplate>
+			<baseSize>4</baseSize>	
+		</ship>
 	</ships>
 </shipDB>
