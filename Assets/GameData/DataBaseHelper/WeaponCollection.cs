@@ -1,15 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System;
 
-public class WeaponCollection : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+[XmlRoot("weaponUpgrades")]
+public class WeaponCollection {
 	
-	}
+	[XmlArray("weapons")]
+	[XmlArrayItem("weapon")]
+	public List<WeaponClass> weaponClass = new List<WeaponClass>();
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public static WeaponCollection Load(string path)
+	{
+		XmlSerializer serializer = new XmlSerializer(typeof(WeaponCollection));
+		
+		XmlReader reader = XmlReader.Create(path);
+		
+		reader.Read();
+		
+		WeaponCollection weapons = (WeaponCollection)serializer.Deserialize(reader);
+		
+		reader.Close();
+		
+		return weapons;
 	}
 }

@@ -1,15 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System;
 
-public class TechCollection : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+[XmlRoot("techUpgrades")]
+public class TechCollection {
 	
-	}
+	[XmlArray("techUpgrade")]
+	[XmlArrayItem("tech")]
+	public List<TechClass> techClass = new List<TechClass>();
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public static TechCollection Load(string path)
+	{
+		XmlSerializer serializer = new XmlSerializer(typeof(TechCollection));
+		
+		XmlReader reader = XmlReader.Create(path);
+		
+		reader.Read();
+		
+		TechCollection techs = (TechCollection)serializer.Deserialize(reader);
+		
+		reader.Close();
+		
+		return techs;
 	}
 }

@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Xml;
+using System.Xml.Serialization;
 
-public class ShipAbilityClass : MonoBehaviour {
+public class ShipAbilityClass {
+	
+	[XmlAttribute("id")]
+	public float id;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

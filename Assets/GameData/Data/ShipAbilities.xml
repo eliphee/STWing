@@ -37,7 +37,7 @@
 									%di = discard this card
 									X%dio = discard other card -> %CARDTYPE or %CARDNAME
 					-->
-					<costs></costs>
+					<costs>0</costs>
 						
 					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
 										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten

@@ -1,11 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-public class DataBaseLoader : MonoBehaviour {
+public class DataBaseLoader : MonoBehaviour{
 
-	public const string constPath = "Assets\\GameData\\Data\\";
+	public const string PATH = "Assets\\GameData\\Data\\";
 	public const string SHIPPATH = "Ships.xml";
 	public const string CREWPATH = "UpgradesCrew.xml";
+	public const string WEAPONPATH = "UpgradesWeapons.xml";
+	public const string TECHPATH = "UpgradesTech.xml";
+	public const string SHIPABILITYPATH = "ShipAbilities.xml";
+	public const string CAPTAINPATH = "Captains.xml";
+	public const string CAPTAINUPGRADEPATH = "CaptainUpgrades.xml";
+
 
 	void Start ()
 	{
@@ -16,7 +22,7 @@ public class DataBaseLoader : MonoBehaviour {
 	// Use this for initialization
 	public DataBaseLoader (string type) 
 	{
-		string endPath = constPath + type;
+		string endPath = PATH + type;
 		switch (type)
 		{
 			case SHIPPATH:
@@ -25,12 +31,25 @@ public class DataBaseLoader : MonoBehaviour {
 			case CREWPATH:
 				crewLoad(endPath);
 			break;
-
+			case WEAPONPATH:
+				weaponLoad(endPath);
+			break;
+			case TECHPATH:
+				techLoad(endPath);
+			break;
+			case SHIPABILITYPATH:
+				shipAbilityLoad(endPath);
+			break;
+			case CAPTAINPATH:
+				captainLoad(endPath);
+			break;
+			case CAPTAINUPGRADEPATH:
+				captainUpgradeLoad(endPath);
+			break;
 			default:
-				SendMessage("DataBaseLoader kann die Datenbank nicht finden!");
+				Debug.Log("DataBaseLoader kann die angegebene Datenbank nicht finden!");
 			break;
 		}
-
 	}
 
 	private ShipCollection shipLoad(string path)
@@ -40,14 +59,38 @@ public class DataBaseLoader : MonoBehaviour {
 		//nur zum testen, sonst unnötig
 		foreach (ShipClass ship in sc.shipClass)
 		{
-			print (ship.id);
+			Debug.Log (ship.id);
 		}
 		return sc;
 	}
 
 	private CrewCollection crewLoad(string path)
 	{
-		CrewCollection cc = CrewCollection.Load(path);
-		return cc;
+		return CrewCollection.Load(path);
+	}
+
+	private TechCollection techLoad(string path)
+	{
+		return TechCollection.Load(path);
+	}
+
+	private WeaponCollection weaponLoad(string path)
+	{
+		return WeaponCollection.Load(path);
+	}
+
+	private CaptainCollection captainLoad(string path)
+	{
+		return CaptainCollection.Load(path);
+	}
+
+	private ShipAbilityCollection shipAbilityLoad(string path)
+	{
+		return ShipAbilityCollection.Load(path);
+	}
+
+	private CaptainUpgradeCollection captainUpgradeLoad(string path)
+	{
+		return CaptainUpgradeCollection.Load(path);
 	}
 }

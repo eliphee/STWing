@@ -36,9 +36,9 @@
 			<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
 			<squadronPoints>4</squadronPoints>
 			<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
-			<restriction></restriction>
-			<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
-			<restrictionPenalty></restrictionPenalty>
+			<restriction>none</restriction>
+			<!-- 0 = none, 99 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+			<restrictionPenalty>0</restrictionPenalty>
 			<abilities>
 				<ability>
 					<!-- costs: 	(X: player choice or X: fix number)

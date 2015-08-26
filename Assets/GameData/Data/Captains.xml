@@ -36,9 +36,9 @@
 			<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
 			<squadronPoints>6</squadronPoints>
 			<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
-			<restriction></restriction>
-			<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
-			<restrictionPenalty></restrictionPenalty>
+			<restriction>none</restriction>
+			<!-- 0 = none, 99 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+			<restrictionPenalty>0</restrictionPenalty>
 			
 			<!-- 
 			check if action possible (check costs)
@@ -55,7 +55,7 @@
 									%di = discard this card
 									X%dio = discard other card -> %CARDTYPE or %CARDNAME
 					-->
-						<costs></costs>
+						<costs>0</costs>
 					
 					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
 										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
