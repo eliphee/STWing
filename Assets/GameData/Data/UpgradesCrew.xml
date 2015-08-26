@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	%n = NewLine
+	%a = 'ACTION:' condition
+	%ae = Action: Evade
+	%at = Action: Target-Lock
+	%as = Action: Scanning
+	%ab = Action: Battle Stations
+	%ac = Action: Cloak
+	%aq = Action: Sensor Echo
+	%sc = Slot: Crew
+	%st = Slot: Tech
+	%sw = Slot: Weapon
+	%se = Slot: Elite Talent
+	%ch = Combat: Hit
+	%cc = Combat: Critical
+	%ce = Combat: Evade
+	%ms = Maneuver: Straight
+	%mbl = Maneuver: Bank Left
+	%mbr = Maneuver: Bank Right
+	%mtl = Maneuver: Turn Left
+	%mtr = Maneuver: Turn Right
+	%mca = Maneuver: Come About
+	%mfa = Maneuver: Full Astern
+-->
+<crews>
+	<crew>
+		<member id="1">
+			<name>T'Pol</name>
+			<!-- %Federation%Klingon = 2 Fraktionen // %Federation§Vulcan = Nur eine Fraktion, aber für die andere gleich teuer -->
+			<faction>%Federation§Vulcan</faction>
+			<unique>true</unique>
+			<shipUnique>false</shipUnique>
+			<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
+			<squadronPoints>3</squadronPoints>
+			<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
+			<restriction></restriction>
+			<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+			<restrictionPenalty></restrictionPenalty>
+			
+			<!-- 
+			check if action possible (check costs)
+			Example trigger: 	if true = Ship not cloaked
+								highlight every enemy Ship in Range 0-2 AND not cloaked AND active shields = 0
+			Example costs: 		%di AND Xdio, %CARDNAME		
+			-->
+			<abilities>
+				<ability>
+					<!-- costs: 	(X: player choice or X: fix number)
+									%p = no costs
+									%d = disable this card
+									X%do = disable other card -> %CARDTYPE or %CARDNAME
+									%di = discard this card
+									X%dio = discard other card -> %CARDTYPE or %CARDNAME
+					-->
+						<costs></costs>
+					
+					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+										reaction = wird durch den "trigger" definiert
+					-->
+						<activation>passive</activation>				
+						<phase></phase>
+					<!-- %ship, %range,  -->
+						<trigger></trigger>
+					<!-- %AuxTokenX, X%YYYSlot(YYY=Type), X%reduceDefense -->
+						<effect>1%TechSlot</effect> 
+						<text>Add 1 %st slot to your Upgrade Bar.</text>
+				</ability>
+				<ability>
+					<!-- costs: 	(X: player choice or X: fix number)
+									%p = no costs
+									%d = disable this card
+									X%do = disable other card -> %CARDTYPE or %CARDNAME
+									%di = discard this card
+									X%dio = discard other card -> %CARDTYPE or %CARDNAME
+					-->
+						<costs>%d</costs>
+					
+					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+										reaction = wird durch den "trigger" definiert
+					-->
+						<activation>passive</activation>				
+						<phase>%attack</phase>
+					<!-- %ship, %range,  -->
+						<trigger>%primaryWeapon%scanToken</trigger>
+					<!-- %AuxTokenX, X%YYYSlot(YYY=Type), X%reduceDefense -->
+						<effect>1%reduceDefense</effect> 
+						<text>When attacking with your Primary Weapon, if there is a %as Token beside your ship, 
+								you may disable this card to force the defending player to roll -2 defense dice against your attack (instead of -1 defense die). %n
+								You do not pay a Faction penalty when deploying this card to Vulcan ship.</text>
+				</ability>
+			</abilities>
+		</member>
+	</crew>
+</crews>	

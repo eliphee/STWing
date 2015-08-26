@@ -41,7 +41,36 @@ public class ShipClass {
 	[XmlElement("rearArc")]
 	public float rearArc;
 
-	//Action Bar und Upgrades fehlen
+	//Action Bar 
+	[XmlElement("evade")]
+	public bool evade;
+
+	[XmlElement("targetLock")]
+	public bool targetLock;
+
+	[XmlElement("scanning")]
+	public bool scanning;
+
+	[XmlElement("battleStations")]
+	public bool battleStations;
+
+	[XmlElement("cloak")]
+	public bool cloak;
+
+	[XmlElement("shift")]
+	public bool shift;
+	//Action Bar End
+
+	//Upgrades
+	[XmlElement("weaponUpgrades")]
+	public float weaponUpgrades;
+
+	[XmlElement("crewUpgrades")]
+	public float crewUpgrades;
+
+	[XmlElement("techUpgrades")]
+	public float techUpgrades;
+	//Upgrades End
 
 	[XmlElement("ability")]
 	public string ability;

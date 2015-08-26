@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System;
 
-[XmlRoot("shipsAlt")]
+[XmlRoot("shipDB")]
 public class ShipCollection {
 
 	[XmlArray("ships")]
