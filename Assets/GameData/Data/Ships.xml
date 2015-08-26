@@ -27,8 +27,7 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.
-			</ability>
+			<ability>Instead of making a normal attack with your primary weapon, you may fire in any direction at Range 1-2 with 3 attack dice.</ability>
 			<abilityID>011</abilityID>
 			<maneuverTemplate>13</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -58,8 +57,8 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability></ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>13</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -88,8 +87,7 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>After you move, if no enemy ships are in within Range 1 of your ship, you may perform a %as Action as a free Action.
-			</ability>
+			<ability>After you move, if no enemy ships are in within Range 1 of your ship, you may perform a %as Action as a free Action.</ability>
 			<abilityID>021</abilityID>
 			<maneuverTemplate>7</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -119,8 +117,7 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>When you initiate an attack against a cloaked ship, roll +1 attack die.
-			</ability>
+			<ability>When you initiate an attack against a cloaked ship, roll +1 attack die.</ability>
 			<abilityID>022</abilityID>
 			<maneuverTemplate>7</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -150,9 +147,8 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>7</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -181,8 +177,7 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>You gain +1 attack die when firing at Range 1.
-			</ability>
+			<ability>You gain +1 attack die when firing at Range 1.</ability>
 			<abilityID>031</abilityID>
 			<maneuverTemplate>4</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -212,9 +207,8 @@
 				<crewUpgrades>1</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>4</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -243,8 +237,7 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>When defending, convert all of your opponent's %cc results into %ch results.
-			</ability>
+			<ability>When defending, convert all of your opponent's %cc results into %ch results.</ability>
 			<abilityID>041</abilityID>
 			<maneuverTemplate>6</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -274,9 +267,8 @@
 				<crewUpgrades>1</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>6</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -305,8 +297,7 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>2</techUpgrades>
 			<!-- upgrades -->
-			<ability>%a If you performed a %ms Maneuver this round, immediately perform an additional 1%ms or 2%ms Maneuver.
-			</ability>
+			<ability>%a If you performed a %ms Maneuver this round, immediately perform an additional 1%ms or 2%ms Maneuver.</ability>
 			<abilityID>051</abilityID>
 			<maneuverTemplate>16</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -333,12 +324,11 @@
 			<!-- actionBar -->
 			<!-- upgrades -->
 				<weaponUpgrades>2</weaponUpgrades>
-				<crewUpgrades>1<crewUpgrades>
+				<crewUpgrades>1</crewUpgrades>
 				<techUpgrades>2</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>16</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -367,8 +357,7 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>You may fire a Torpedo at an enemy ship without needing a Target Lock. If you do so, plance an Auxiliary Power Token beside your ship.
-			</ability>
+			<ability>You may fire a Torpedo at an enemy ship without needing a Target Lock. If you do so, place an Auxiliary Power Token beside your ship.</ability>
 			<abilityID>061</abilityID>
 			<maneuverTemplate>9</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -398,9 +387,8 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>9</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -429,8 +417,7 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>Instead of making a normal attack with your Primary Weapon, you may fire in any direction at Range 1-2 with 4 attack dice. If you do so, place an Auxiliary Power Token beside your ship.
-			</ability>
+			<ability>Instead of making a normal attack with your Primary Weapon, you may fire in any direction at Range 1-2 with 4 attack dice. If you do so, place an Auxiliary Power Token beside your ship.</ability>
 			<abilityID>071</abilityID>
 			<maneuverTemplate>11</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -460,9 +447,8 @@
 				<crewUpgrades>2</crewUpgrades>
 				<techUpgrades>1</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>11</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>
@@ -491,8 +477,7 @@
 				<crewUpgrades>3</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>You may equip the Enhanced Hull Plating %st Upgrade to your ship for free even if it exceeds your ship's restrictions.
-			</ability>
+			<ability>You may equip the Enhanced Hull Plating %st Upgrade to your ship for free even if it exceeds your ship's restrictions.</ability>
 			<abilityID>081</abilityID>
 			<maneuverTemplate>2</maneuverTemplate>
 			<baseSize>4</baseSize>	
@@ -522,9 +507,8 @@
 				<crewUpgrades>1</crewUpgrades>
 				<techUpgrades>0</techUpgrades>
 			<!-- upgrades -->
-			<ability>
-			</ability>
-			<abilityID></abilityID>
+			<ability>none</ability>
+			<abilityID>0</abilityID>
 			<maneuverTemplate>2</maneuverTemplate>
 			<baseSize>4</baseSize>	
 		</ship>

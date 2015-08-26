@@ -23,68 +23,74 @@
 	%mca = Maneuver: Come About
 	%mfa = Maneuver: Full Astern
 -->
-<weapons>
-	<weapon>
-		<property name="id" value="1" />
-		<property name="name" value="Photon Torpedoes" />
-		<!-- %Federation%Klingon = 2 Fraktionen // %Federation§Vulcan = Nur eine Fraktion, aber für die andere gleich teuer -->
-		<property name="faction" value="%Federation" />
-		<property name="unique" value="false" />
-		<property name="shipUnique" value="false" />
-		<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
-		<property name="squadronPoints" value="5" />
-		<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
-		<property name="restriction" value="" />
-		<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
-		<property name="restrictionPenalty" value="" />
-		<abilities>
-			<property class="ability">
-			<!-- costs: 	(X: player choice or X: fix number)
-							%p = no costs
-							%d = disable this card
-							X%do = disable other card -> %CARDTYPE or %CARDNAME
-							%di = discard this card
-							X%dio = discard other card -> %CARDTYPE or %CARDNAME
-			-->
-				<property name="costs" value="%d%at" />
+<weaponUpgrades>
+	<weapons>
+		<weapon id="1">
+			<name>Photon Torpedoes</name>
+			<!-- %Federation%Klingon = 2 Fraktionen // %Federation§Vulcan = Nur eine Fraktion, aber für die andere gleich teuer -->
+			<faction>%Federation</faction>
+			<unique>false</unique>
+			<shipUnique>false</shipUnique>
+			<!-- Special Attribute + X or X: Beispiel wenn ein Upgrade von der Hülle abhängt, dann Hülle+1 -->
+			<squadronPoints>5</squadronPoints>
+			<!-- %name, %class, %fraction, %hullValue, %weaponValue, %high, %low -->
+			<restriction></restriction>
+			<!-- 0 = not possible, -X to -1 AND 1 to X = costs for other Ships -->
+			<restrictionPenalty></restrictionPenalty>
 			
-			<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
-								passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
-								reaction = wird durch den "trigger" definiert
+			<!-- 
+			check if action possible (check costs)
+			Example trigger: 	if true = Ship not cloaked
+								highlight every enemy Ship in Range 0-2 AND not cloaked AND active shields = 0
+			Example costs: 		%di AND Xdio, %CARDNAME		
 			-->
-				<property name="activation" value="attack" />				
-				<property name="phase" value="AttackPhase" />
-			<!-- %ship, %range, %rearArc, %frontArc, %radiusXXX -->
-				<property name="trigger" value="%enemy%range23%rearArc%frontArc" />
-			<!-- %AuxTokenX, %attackDieX -->
-				<property name="effect" value="%attackDie5" /> 
-				<property name="text" value="ATTACK: %at Spend your target lock and disable this card to perform this attack. %n%n" />
-			</property>
-		</abilities>
-		<abilities>
-			<property class="ability">
-			<!-- costs: 	(X: player choice or X: fix number)
-							%p = no costs
-							%d = disable this card
-							X%do = disable other card -> %CARDTYPE or %CARDNAME
-							%di = discard this card
-							X%dio = discard other card -> %CARDTYPE or %CARDNAME
-			-->
-				<property name="costs" value="%bsDiceResult1" />
-			
-			<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
-								passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
-								reaction = wird durch den "trigger" definiert
-			-->
-				<property name="activation" value="reaction" />				
-				<property name="phase" value="AttackPhase" />
-			<!-- %ship, %range, %rearArc, %frontArc, %radiusXXX, %thisCard -->
-				<property name="trigger" value="%thisCard" />
-			<!-- %AuxTokenX, %attackDieX -->
-				<property name="effect" value="%cc1" /> 
-				<property name="text" value="You may convert 1 of your %ab results into a %cc result. %n%n
-												You may fire this weapon from your forward or rear firing arcs." />
-			</property>
-		</abilities>
-	</weapon>
-</weapons>	
+			<abilities>
+				<ability>
+					<!-- costs: 	(X: player choice or X: fix number)
+									%p = no costs
+									%d = disable this card
+									X%do = disable other card -> %CARDTYPE or %CARDNAME
+									%di = discard this card
+									X%dio = discard other card -> %CARDTYPE or %CARDNAME
+					-->
+						<costs>%d%at</costs>
+					
+					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+										reaction = wird durch den "trigger" definiert
+					-->
+						<activation>attack</activation>				
+						<phase>AttackPhase</phase>
+					<!-- %ship, %range,  -->
+						<trigger>%enemy%range23%rearArc%frontArc</trigger>
+					<!-- %AuxTokenX, X%YYYSlot(YYY=Type), X%reduceDefense -->
+						<effect>%attackDie5</effect> 
+						<text>ATTACK: %at Spend your target lock and disable this card to perform this attack. %n%n</text>
+				</ability>
+				<ability>
+					<!-- costs: 	(X: player choice or X: fix number)
+									%p = no costs
+									%d = disable this card
+									X%do = disable other card -> %CARDTYPE or %CARDNAME
+									%di = discard this card
+									X%dio = discard other card -> %CARDTYPE or %CARDNAME
+					-->
+						<costs>%bsDiceResult1</costs>
+					
+					<!-- activation: 	action = muss als Action eingesetzt werden -> kann durch eine Bedingung "trigger" eingeschränkt werden
+										passive = gilt immer (Einschränkung durch "phase" möglich) -> kann Bedingung in "trigger" enthalten
+										reaction = wird durch den "trigger" definiert
+					-->
+						<activation>reaction</activation>				
+						<phase>AttackPhase</phase>
+					<!-- %ship, %range,  -->
+						<trigger>%thisCard</trigger>
+					<!-- %AuxTokenX, X%YYYSlot(YYY=Type), X%reduceDefense -->
+						<effect>%cc1</effect> 
+						<text>You may convert 1 of your %ab results into a %cc result. %n%n
+								You may fire this weapon from your forward or rear firing arcs.</text>
+				</ability>
+			</abilities>
+		</weapon>
+	</weapons>	
+</weaponUpgrades>
