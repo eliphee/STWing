@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShipLoader : MonoBehaviour {
 
-	public const string path = "..\\DataBaseHelper\\ShipsAlternativ.xml";
+	public const string path = "Assets\\GameData\\DataBaseHelper\\ShipsAlternativ.xml";
 
 	// Use this for initialization
 	void Start () 
@@ -13,6 +13,7 @@ public class ShipLoader : MonoBehaviour {
 		foreach (ShipClass ship in sc.shipClass)
 		{
 			print (ship.id);
+			print (ship.shipName);
 		}
 	}
 

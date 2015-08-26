@@ -17,11 +17,11 @@ public class ShipCollection {
 	{
 		XmlSerializer serializer = new XmlSerializer(typeof(ShipCollection));
 
-		StringReader reader = new StringReader(path);
+		XmlReader reader = XmlReader.Create(path);
 
 		reader.Read();
 		
-		ShipCollection ships = serializer.Deserialize(reader) as ShipCollection;
+		ShipCollection ships = (ShipCollection)serializer.Deserialize(reader);
 
 		reader.Close();
 		
