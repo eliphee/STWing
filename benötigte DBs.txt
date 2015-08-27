@@ -1,0 +1,49 @@
+Welche Datenbanken brauchen wir?
+// XML  (Wird in Spieleordner unter "Data" gespeichert)
+- *ready* Schiffsdatenbank (Schiffsvalues mit Basiswerten)
+- *angelegt* Kartendatenbanken (Kartentyp, Karteneffekt)
+	- Schiffsdatenbank (Spezialfähigkeit des Schiffs als Karteneffekt)
+	- Captains
+	- TechUpgrades
+	- Weapons
+	- Crew
+- *angelegt* MovementPatterns (Die zu einem Schiff gehörige zusammenstellung von MovePatterns)
+
+
+// Ingame-SQL? (wird in Spieleordner unter "Player" gespeichert)
+- Flottendatenbank / Spieler (Spieler-ID, Schiff, Karten)
+!!- Savegame-DB (Spielfeldgröße, Position der Schiffe, Spieler des Schiffs, Schiffstypen und Karten, so wie Beschädigungen -> sehr große DB, mit allen Daten!)
+
+
+Projektplan: 
+Prio 1 - 50%:
+Thomas: 80% (es fehlt noch Movement/Abilities) Datenbankschnittstelle (auslesen)
+
+*erledigt* Datenbanken komplett strukturieren
+
+Thomas: 90% Struktur angepasst. (Movement fehlt)
+
+Prio 2: 
+???: Flottendatenbank
+
+???: Schnittstelle für Flottendatenbank
+
+???: Menü zum Fleet Manager (Zugriff auf Datenbank)
+
+Prio 3:
+Marcel: Vollständige Implementierung der Schiffsbewegung und dazugehörigen Menüs
+
+???: Main Menü
+
+Prio 4: 
+???: Kompletter Rundenablauf/Netzwerkcode (Wir versuchen ein Broadcast (via UDP?) an alle Spieler, bei jeder Aktion) (Jeder kann dann speichern und das Spiel erneut laden)
+
+Prio 5:
+- 0% Datenbanken mit Daten füllen
+
+
+Übersicht Reaktionen:
+Spieler 2: Set Card ready
+Spieler 1: Move
+Spieler 2: Darf reagieren, wird darüber informiert, dass Aktion A genutzt werden kann -> Spieler 1 wird informiert, dass Spieler 2 reagieren darf (einfacher Infoscreen)
+
