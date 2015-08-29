@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+/**
+ * Der DataBaseLoader stellt die verschiedenen Load-Klassen für die XML-Datenbanken zur Verfügung.
+ */
 public class DataBaseLoader : MonoBehaviour{
 
 	public const string PATH = "Assets\\GameData\\Data\\";
@@ -11,12 +14,13 @@ public class DataBaseLoader : MonoBehaviour{
 	public const string SHIPABILITYPATH = "ShipAbilities.xml";
 	public const string CAPTAINPATH = "Captains.xml";
 	public const string CAPTAINUPGRADEPATH = "CaptainUpgrades.xml";
+	public const string MOVEMENTPATH = "MovementPatterns.xml";
 
 
-	void Start ()
+	/*void Start ()
 	{
 		//gibt ne Warning, muss korrigiert werden!
-		new DataBaseLoader(SHIPPATH);
+		new DataBaseLoader(MOVEMENTPATH);
 	}
 
 	// Use this for initialization
@@ -46,51 +50,88 @@ public class DataBaseLoader : MonoBehaviour{
 			case CAPTAINUPGRADEPATH:
 				captainUpgradeLoad(endPath);
 			break;
+			case MOVEMENTPATH:
+				movementLoad(endPath);
+			break;
 			default:
 				Debug.Log("DataBaseLoader kann die angegebene Datenbank nicht finden!");
 			break;
 		}
+	}*/
+
+	/**
+	 * Gibt alle Schiffe als ShipCollection zurück
+	 * 
+	 */
+	public ShipCollection shipLoad()
+	{
+		return ShipCollection.Load(PATH+SHIPPATH);
 	}
 
-	private ShipCollection shipLoad(string path)
+	/**
+	 * Gibt alle Crew-Cards als CrewCollection zurück
+	 * 
+	 */
+	public CrewCollection crewLoad()
 	{
-		ShipCollection sc = ShipCollection.Load(path);
-
-		//nur zum testen, sonst unnötig
-		foreach (ShipClass ship in sc.shipClass)
-		{
-			Debug.Log (ship.id);
-		}
-		return sc;
+		return CrewCollection.Load(PATH+CREWPATH);
 	}
 
-	private CrewCollection crewLoad(string path)
+	/**
+	 * Gibt alle Tech-Cards als TechCollection zurück
+	 * 
+	 */
+	public TechCollection techLoad()
 	{
-		return CrewCollection.Load(path);
+		return TechCollection.Load(PATH+TECHPATH);
 	}
 
-	private TechCollection techLoad(string path)
+	/**
+	 * Gibt alle Weapon-Cards als WeaponCollection zurück
+	 * 
+	 */
+	public WeaponCollection weaponLoad()
 	{
-		return TechCollection.Load(path);
+		return WeaponCollection.Load(PATH+WEAPONPATH);
 	}
 
-	private WeaponCollection weaponLoad(string path)
+	/**
+	 * Gibt alle Captain-Cards als CaptainCollection zurück
+	 * 
+	 */
+	public CaptainCollection captainLoad()
 	{
-		return WeaponCollection.Load(path);
+		return CaptainCollection.Load(PATH+CAPTAINPATH);
 	}
 
-	private CaptainCollection captainLoad(string path)
+	/**
+	 * Gibt alle ShipAbility-Cards als ShipAbilityCollection zurück
+	 * 
+	 */
+	public ShipAbilityCollection shipAbilityLoad()
 	{
-		return CaptainCollection.Load(path);
+		return ShipAbilityCollection.Load(PATH+SHIPABILITYPATH);
 	}
 
-	private ShipAbilityCollection shipAbilityLoad(string path)
+	/**
+	 * Gibt alle CaptainUpgrade-Cards als CaptainUpgradeCollection zurück
+	 * 
+	 */
+	public CaptainUpgradeCollection captainUpgradeLoad()
 	{
-		return ShipAbilityCollection.Load(path);
+		return CaptainUpgradeCollection.Load(PATH+CAPTAINUPGRADEPATH);
 	}
 
-	private CaptainUpgradeCollection captainUpgradeLoad(string path)
+	/**
+	 * Gibt ALLE MovementPattern in einer MovementCollection zurück.
+	 * Die MovementCollection beinhaltet eine Liste von Pattern-ID und einen Array mit dazugehörigen Maneuvern.
+	 * Durch den Zugriff auf den Maneuver-Array erhält man:
+	 * - speed
+	 * - difficulty
+	 * - bearing
+	 */
+	public MovementCollection movementLoad(string path)
 	{
-		return CaptainUpgradeCollection.Load(path);
+		return MovementCollection.Load(path);
 	}
 }

@@ -16,12 +16,12 @@ Welche Datenbanken brauchen wir?
 
 
 Projektplan: 
-Prio 1 - 50%:
-Thomas: 80% (es fehlt noch Movement/Abilities) Datenbankschnittstelle (auslesen)
+*erledigt* Prio 1:
+*erledigt* Datenbankschnittstelle (auslesen)
 
 *erledigt* Datenbanken komplett strukturieren
 
-Thomas: 90% Struktur angepasst. (Movement fehlt)
+*erledigt* Struktur angepasst. 
 
 Prio 2: 
 ???: Flottendatenbank

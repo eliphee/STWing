@@ -12,6 +12,9 @@ public class CaptainUpgradeCollection {
 	[XmlArray("captainUpgrade")]
 	[XmlArrayItem("captainSpecial")]
 	public List<CaptainUpgradeClass> captainUpgradeClass = new List<CaptainUpgradeClass>();
+	[XmlArray("abilities")]
+	[XmlArrayItem("ability")]
+	public List<AbilityClass> abilityClass = new List<AbilityClass>();
 	
 	public static CaptainUpgradeCollection Load(string path)
 	{

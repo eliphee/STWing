@@ -18,9 +18,7 @@ public class CaptainCollection {
 		XmlSerializer serializer = new XmlSerializer(typeof(CaptainCollection));
 		
 		XmlReader reader = XmlReader.Create(path);
-		
-		reader.Read();
-		
+
 		CaptainCollection captains = (CaptainCollection)serializer.Deserialize(reader);
 		
 		reader.Close();

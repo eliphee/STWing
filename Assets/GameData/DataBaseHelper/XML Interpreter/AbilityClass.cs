@@ -3,10 +3,13 @@ using System.Collections;
 using System.Xml;
 using System.Xml.Serialization;
 
-public class ShipAbilityClass {
-	
-	[XmlAttribute("id")]
-	public float id;
+public class AbilityClass {
+
+	[XmlElement("ability")]
+	public absClass[] ability;
+}
+
+public class absClass{
 
 	[XmlElement("costs")]
 	public string costs;

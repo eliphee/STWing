@@ -12,6 +12,9 @@ public class WeaponCollection {
 	[XmlArray("weapons")]
 	[XmlArrayItem("weapon")]
 	public List<WeaponClass> weaponClass = new List<WeaponClass>();
+	[XmlArray("abilities")]
+	[XmlArrayItem("ability")]
+	public List<AbilityClass> abilityClass = new List<AbilityClass>();
 	
 	public static WeaponCollection Load(string path)
 	{

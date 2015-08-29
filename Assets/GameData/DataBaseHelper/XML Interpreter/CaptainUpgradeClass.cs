@@ -28,4 +28,7 @@ public class CaptainUpgradeClass {
 	
 	[XmlElement("restrictionPenalty")]
 	public float restrictionPenalty;
+
+	[XmlElement("abilities")]
+	public AbilityClass abilities;
 }

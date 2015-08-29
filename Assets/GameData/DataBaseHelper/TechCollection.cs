@@ -12,6 +12,9 @@ public class TechCollection {
 	[XmlArray("techUpgrade")]
 	[XmlArrayItem("tech")]
 	public List<TechClass> techClass = new List<TechClass>();
+	[XmlArray("abilities")]
+	[XmlArrayItem("ability")]
+	public List<AbilityClass> abilityClass = new List<AbilityClass>();
 	
 	public static TechCollection Load(string path)
 	{

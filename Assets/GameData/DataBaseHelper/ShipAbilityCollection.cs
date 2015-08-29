@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -12,6 +12,9 @@ public class ShipAbilityCollection {
 	[XmlArray("shipAbility")]
 	[XmlArrayItem("shipSpecial")]
 	public List<ShipAbilityClass> shipAbilityClass = new List<ShipAbilityClass>();
+	[XmlArray("abilities")]
+	[XmlArrayItem("ability")]
+	public List<AbilityClass> abilityClass = new List<AbilityClass>();
 	
 	public static ShipAbilityCollection Load(string path)
 	{

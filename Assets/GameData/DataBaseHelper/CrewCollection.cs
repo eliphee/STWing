@@ -15,16 +15,14 @@ public class CrewCollection {
 	
 	public static CrewCollection Load(string path)
 	{
-		XmlSerializer serializer = new XmlSerializer(typeof(CrewCollection));
-		
+		XmlSerializer serializer = new XmlSerializer(typeof(CrewCollection)); //CreateOverrider();
+
 		XmlReader reader = XmlReader.Create(path);
 		
-		reader.Read();
-		
 		CrewCollection crews = (CrewCollection)serializer.Deserialize(reader);
-		
+	
 		reader.Close();
-		
+
 		return crews;
 	}
 }
