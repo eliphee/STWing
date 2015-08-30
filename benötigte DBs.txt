@@ -24,11 +24,11 @@ Projektplan:
 *erledigt* Struktur angepasst. 
 
 Prio 2: 
-???: Flottendatenbank
+Thomas: 0% Flottendatenbank
 
-???: Schnittstelle für Flottendatenbank
+Thomas: 0% Schnittstelle für Flottendatenbank
 
-???: Menü zum Fleet Manager (Zugriff auf Datenbank)
+Thomas: 0% Menü zum Fleet Manager (Zugriff auf Datenbank)
 
 Prio 3:
 Marcel: Vollständige Implementierung der Schiffsbewegung und dazugehörigen Menüs
@@ -39,7 +39,7 @@ Prio 4:
 ???: Kompletter Rundenablauf/Netzwerkcode (Wir versuchen ein Broadcast (via UDP?) an alle Spieler, bei jeder Aktion) (Jeder kann dann speichern und das Spiel erneut laden)
 
 Prio 5:
-- 0% Datenbanken mit Daten füllen
+- 0,1% Datenbanken mit Daten füllen
 
 
 Übersicht Reaktionen:
