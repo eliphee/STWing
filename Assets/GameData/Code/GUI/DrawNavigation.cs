@@ -41,7 +41,7 @@ public class DrawNavigation : MonoBehaviour {
 
 	public Canvas gui;
 	private GameObject panelMovement;
-	public GameObject arrowUp;
+	public GameObject arrowStraight;
 	public GameObject arrowComeabout;
 	public GameObject arrowLeftBank;
 	public GameObject arrowLeftTurn;
@@ -53,11 +53,6 @@ public class DrawNavigation : MonoBehaviour {
 	void Start ()
 	{
 		panelMovement = GameObject.Find ("Panel Movement");
-//		GameObject newArrow = GameObject.Instantiate (arrowUp);
-//		newArrow.transform.SetParent (panelMovement.transform);
-//		RectTransform newArrow_rt = newArrow.GetComponent<RectTransform>();
-//		newArrow_rt.anchoredPosition = new Vector2 (23.3f, 68.7f);
-//		Debug.Log (newArrow.transform.parent.name + " -- " + newArrow.transform.position.x + "," + newArrow.transform.position.y + "," + newArrow.transform.position.z);
 	}
 	
 	// Update is called once per frame
@@ -67,26 +62,6 @@ public class DrawNavigation : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-
-//		<pattern id="8">
-//			<maneuver speed="1" bearing="Straight" difficulty="green" />
-//			<maneuver speed="1" bearing="LeftBank" difficulty="green" />
-//			<maneuver speed="1" bearing="RightBank" difficulty="green" />
-//			<maneuver speed="2" bearing="Straight" difficulty="green" />
-//			<maneuver speed="2" bearing="LeftBank" difficulty="white" />
-//			<maneuver speed="2" bearing="LeftTurn" difficulty="white" />
-//			<maneuver speed="2" bearing="RightBank" difficulty="white" />
-//			<maneuver speed="2" bearing="RightTurn" difficulty="white" />
-//			<maneuver speed="3" bearing="Straight" difficulty="white" />
-//			<maneuver speed="3" bearing="LeftBank" difficulty="white" />
-//			<maneuver speed="3" bearing="LeftTurn" difficulty="red" />
-//			<maneuver speed="3" bearing="RightBank" difficulty="white" />
-//			<maneuver speed="3" bearing="RightTurn" difficulty="red" />
-//			<maneuver speed="4" bearing="Straight" difficulty="white" />
-//			<maneuver speed="-1" bearing="FullAstern" difficulty="red" />
-//		</pattern>
-
-
 		Ship.Maneuver[] debugManeuvers = new Ship.Maneuver[]
 		{
 			new Ship.Maneuver(1, "Straight", "green"),
@@ -160,7 +135,7 @@ public class DrawNavigation : MonoBehaviour {
 		switch (bearing)
 		{
 			case "Straight":
-				newArrow = GameObject.Instantiate (arrowUp);
+				newArrow = GameObject.Instantiate (arrowStraight);
 				col = 4;
 				break;
 			case "ComeAbout":
@@ -224,6 +199,13 @@ public class DrawNavigation : MonoBehaviour {
 		newArrow.transform.SetParent (panelMovement.transform);
 		RectTransform newArrow_rt = newArrow.GetComponent<RectTransform>();
 		newArrow_rt.anchoredPosition = new Vector2 (posX, posY);
+
+		// Store variables in attached script 'ManeuverHandler
+		newArrow_rt.GetComponent<ManeuverHandler> ().LoadPattern (speed, bearing, difficulty, gameObject);
+//		newArrow_rt.GetComponent<ManeuverHandler>().speed = speed;
+//		newArrow_rt.GetComponent<ManeuverHandler>().bearing = bearing;
+//		newArrow_rt.GetComponent<ManeuverHandler>().difficulty = difficulty;
+//		newArrow_rt.GetComponent<ManeuverHandler>().targetObject = gameObject;
 	}
 
 }
