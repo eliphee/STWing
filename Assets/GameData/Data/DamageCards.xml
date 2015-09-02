@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	Effect Functions:
+		ModifyCaptainSkill 			(target, modType, modAmount)
+									(Example: "AttachedShip", "Reduce/Add/Set", "0-99")
+		SufferDamage				(damageAmount, damageTarget)
+									(Example: "1", "AttachedShip/AttachedShipHull/AttachedShipShields")
+		SufferDamageOnAttackRole 	(rollAmount, rollTrigger, damageAmount, damageTarget)
+									(Example: "1", "Hit", "1", "AttachedShip/AttachedShipHull/AttachedShipShields")
+		FlipDamageCard				(rollAmount, rollTrigger)
+									(Example: "0/1", "[blank]/Hit/Hit,Crit")
+		LockActionBar				(target)
+									(Example: "AttachedShip")
+		LockCaptainAbility			(target)
+									(Example: "AttachedShip")
+		LockEliteTalents			(target)
+									(Example: "AttachedShip")
+		DicardShipUpgrade			(target, upgradeType, selectType, amount)
+									(Example: "AttachedShip", "Weapon", "OwnerChoise", "1")
+		ModifyShipManeuvers			(target, targetBearing, targetSpeed, ChangeDifficultyTo)
+									(Example: "AttachedShip", "Turn", "All", "Red")
+		ChangeAuxiliaryToken		(target, modType, modAmount)
+									(Example: "AttachedShip, "Add", "1")
+		ModifyShipStats				(target, modAttribute, modType, modAmount)
+									(Example: "AttachedShip", "Agility", "Reduce", "1")
+		SkipAttack					(target)
+									(Example: "AttachedShip")
+		DestroyShipOnAttackRole		(target, rollAmount, rollTrigger)
+									(Example: "AttachedShip", "1", "Critical")
+		AddEjectedWarpCoreMarker	(target)
+									(Example: "AttachedShip")
+-->
+<damagedeck>
+	<damagecards>
+		<damagecard id="1">
+			<title>Communications Failure</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>NextRound</delay>
+					<phase>None</phase>
+					<trigger>None</trigger>
+					<effect name="ModifyCaptainSkill">
+						<property name="target" value="AttachedShip" />
+						<property name="modType" value="Set" />
+						<property name="modAmount" value="0" />
+					</effect>
+					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="2">
+			<title>Communications Failure</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>NextRound</delay>
+					<phase>None</phase>
+					<trigger>None</trigger>
+					<effect name="ModifyCaptainSkill">
+						<property name="target" value="AttachedShip" />
+						<property name="modType" value="Set" />
+						<property name="modAmount" value="0" />
+					</effect>
+					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="3">
+			<title>Console Fire</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>NextRound</delay>
+					<phase>CombatPhase</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShipHull" />
+					</effect>
+					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>ACTION: Flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="4">
+			<title>Console Fire</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>NextRound</delay>
+					<phase>CombatPhase</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShipHull" />
+					</effect>
+					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>ACTION: Flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="5">
+			<title>Damaged Sensor Array</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="LockActionBar">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>You cannot perform the actions listed on your Action Bar.</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+					</effect>
+					<text>ACTION: Roll 1 attack die.%nOn a %ch result,%nflip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="6">
+			<title>Damaged Sensor Array</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="LockActionBar">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>You cannot perform the actions listed on your Action Bar.</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+					</effect>
+					<text>ACTION: Roll 1 attack die.%nOn a %ch result,%nflip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="7">
+			<title>Direct Hit!</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Suffer 1 additional damage and then flip this card face down.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="8">
+			<title>Direct Hit!</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Suffer 1 additional damage and then flip this card face down.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="9">
+			<title>Direct Hit!</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Suffer 1 additional damage and then flip this card face down.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="10">
+			<title>Direct Hit!</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Suffer 1 additional damage and then flip this card face down.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="11">
+			<title>Engine Room Fire</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="ModifyShipManeuvers">
+						<property name="target" value="AttachedShip" />
+						<property name="targetBearing" value="Turn" />
+						<property name="targetSpeed" value="All" />
+						<property name="ChangeDifficultyTo" value="Red" />
+					</effect>
+					<text>Treat all Turn Maneuvers (%mtl or %mtr) as Red Maneuvers.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="12">
+			<title>Engine Room Fire</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="ModifyShipManeuvers">
+						<property name="targetBearing" value="Turn" />
+						<property name="targetSpeed" value="All" />
+						<property name="ChangeDifficultyTo" value="Red" />
+					</effect>
+					<text>Treat all Turn Maneuvers (%mtl or %mtr) as Red Maneuvers.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="13">
+			<title>Injured Captain</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="LockCaptainAbility">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>You cannot use your Captain's text or any of your %se Upgrades.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="LockEliteTalents">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="14">
+			<title>Injured Captain</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="LockCaptainAbility">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>You cannot use your Captain's text or any of your %se Upgrades.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>None</trigger>
+					<effect name="LockEliteTalents">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text></text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="15">
+			<title>Jostled Navigator</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>OverlapObstacle,OverlapShip</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Whenever you execute a Maneuver that caused you to overlap either another ship or an Obstacle Token, suffer 1 damage.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="16">
+			<title>Jostled Navigator</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>OverlapObstacle,OverlapShip</trigger>
+					<effect name="SufferDamage">
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Whenever you execute a Maneuver that caused you to overlap either another ship or an Obstacle Token, suffer 1 damage.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="17">
+			<title>Minor Explosion</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Immediately roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="18">
+			<title>Minor Explosion</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>Immediately roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="19">
+			<title>Minor Hull Breach</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>RedManeuver</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>After executing a Red Maneuver, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="20">
+			<title>Minor Hull Breach</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>RedManeuver</trigger>
+					<effect name="SufferDamageOnAttackRole">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+						<property name="damageAmount" value="1" />
+						<property name="damageTarget" value="AttachedShip" />
+					</effect>
+					<text>After executing a Red Maneuver, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="21">
+			<title>Munitions Failure</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger></trigger>
+					<effect name="DicardShipUpgrade">
+						<property name="target" value="AttachedShip" />
+						<property name="upgradeType" value="Weapon" />
+						<property name="selectType" value="OwnerChoise" />
+						<property name="amount" value="1" />
+					</effect>
+					<text>Immediately choose 1 of your %sw Upgrades and discard it.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="22">
+			<title>Munitions Failure</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger></trigger>
+					<effect name="DicardShipUpgrade">
+						<property name="target" value="AttachedShip" />
+						<property name="upgradeType" value="Weapon" />
+						<property name="selectType" value="OwnerChoise" />
+						<property name="amount" value="1" />
+					</effect>
+					<text>Immediately choose 1 of your %sw Upgrades and discard it.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="23">
+			<title>Power Disruption</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger></trigger>
+					<effect name="ChangeAuxiliaryToken">
+						<property name="target" value="AttachedShip" />
+						<property name="modType" value="Add" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Immediately receive 1 Auxiliary Power Token.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="24">
+			<title>Power Disruption</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger></trigger>
+					<effect name="ChangeAuxiliaryToken">
+						<property name="target" value="AttachedShip" />
+						<property name="modType" value="Add" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Immediately receive 1 Auxiliary Power Token.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="25">
+			<title>Structural Damage</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger></trigger>
+					<effect name="ModifyShipStats">
+						<property name="target" value="AttachedShip" />
+						<property name="modAttribute" value="Agility" />
+						<property name="modType" value="Reduce" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Reduce your Agility value by 1 (to a minimum of "0").</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+					</effect>
+					<text>ACTION: Roll 1 attack die. On a %ch result, flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="26">
+			<title>Structural Damage</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger></trigger>
+					<effect name="ModifyShipStats">
+						<property name="target" value="AttachedShip" />
+						<property name="modAttribute" value="Agility" />
+						<property name="modType" value="Reduce" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Reduce your Agility value by 1 (to a minimum of "0").</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>Instant</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit" />
+					</effect>
+					<text>ACTION: Roll 1 attack die. On a %ch result, flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="27">
+			<title>Stunned Helmsman</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>nextRound</delay>
+					<phase>CombatPhase</phase>
+					<trigger>TargetShipAttacks</trigger>
+					<effect name="SkipAttack">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>The next time you attack,%ndo not roll any attack dice.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="28">
+			<title>Stunned Helmsman</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>nextRound</delay>
+					<phase>CombatPhase</phase>
+					<trigger>TargetShipAttacks</trigger>
+					<effect name="SkipAttack">
+						<property name="target" value="AttachedShip" />
+					</effect>
+					<text>The next time you attack,%ndo not roll any attack dice.</text>
+				</ability>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>AboveAbility</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="0" />
+						<property name="rollTrigger" value="" />
+					</effect>
+					<text>Then flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="29">
+			<title>Warp Core Breach</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>PlanningPhase</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="DestroyShipOnAttackRole">
+						<property name="target" value="AttachedShip" />
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Critical" />
+					</effect>
+					<text>During the Planning Phase, roll 1 attack die. On a %cc result, your ship is destroyed.</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="AddEjectedWarpCoreMarker">
+						<property name="target" value="attachedShip" />
+					</effect>
+					<text>ACTION: For the rest of the game, you may ignore the first paragraph on all Warp Core Breach Cards, but you cannot choose a Maneuver with a number greater than 1.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="30">
+			<title>Warp Core Breach</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>PlanningPhase</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="DestroyShipOnAttackRole">
+						<property name="target" value="AttachedShip" />
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Critical" />
+					</effect>
+					<text>During the Planning Phase, roll 1 attack die. On a %cc result, your ship is destroyed.</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="AddEjectedWarpCoreMarker">
+						<property name="target" value="attachedShip" />
+					</effect>
+					<text>ACTION: For the rest of the game, you may ignore the first paragraph on all Warp Core Breach Cards, but you cannot choose a Maneuver with a number greater than 1.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="31">
+			<title>Warp Core Breach</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>PlanningPhase</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="DestroyShipOnAttackRole">
+						<property name="target" value="AttachedShip" />
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Critical" />
+					</effect>
+					<text>During the Planning Phase, roll 1 attack die. On a %cc result, your ship is destroyed.</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger>NoEjectedWarpCoreMarker</trigger>
+					<effect name="AddEjectedWarpCoreMarker">
+						<property name="target" value="attachedShip" />
+					</effect>
+					<text>ACTION: For the rest of the game, you may ignore the first paragraph on all Warp Core Breach Cards, but you cannot choose a Maneuver with a number greater than 1.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="32">
+			<title>Weapons Malfunction</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger></trigger>
+					<effect name="ModifyShipStats">
+						<property name="target" value="AttachedShip" />
+						<property name="modAttribute" value="Weapon" />
+						<property name="modType" value="Reduce" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Reduce your Primary Weapon value by 1 (to a minimum of "0").</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit,Critical" />
+					</effect>
+					<text>ACTION: Roll 1 attack die.%nOn a %ch or %cc result, flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+		<damagecard id="33">
+			<title>Weapons Malfunction</title>
+			<abilities>
+				<ability>
+					<activation>Passive</activation>
+					<delay>None</delay>
+					<phase>All</phase>
+					<trigger></trigger>
+					<effect name="ModifyShipStats">
+						<property name="target" value="AttachedShip" />
+						<property name="modAttribute" value="Weapon" />
+						<property name="modType" value="Reduce" />
+						<property name="modAmount" value="1" />
+					</effect>
+					<text>Reduce your Primary Weapon value by 1 (to a minimum of "0").</text>
+				</ability>
+				<ability>
+					<activation>Action</activation>
+					<delay>None</delay>
+					<phase>ActionPhase</phase>
+					<trigger>None</trigger>
+					<effect name="FlipDamageCard">
+						<property name="rollAmount" value="1" />
+						<property name="rollTrigger" value="Hit,Critical" />
+					</effect>
+					<text>ACTION: Roll 1 attack die.%nOn a %ch or %cc result, flip this card face down.</text>
+				</ability>
+			</abilities>
+		</damagecard>
+	</damagecards>
+</damagedeck>
+	
