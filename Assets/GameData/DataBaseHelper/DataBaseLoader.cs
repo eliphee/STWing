@@ -16,49 +16,6 @@ public class DataBaseLoader : MonoBehaviour{
 	public const string CAPTAINUPGRADEPATH = "CaptainUpgrades.xml";
 	public const string MOVEMENTPATH = "MovementPatterns.xml";
 
-
-	/*void Start ()
-	{
-		//gibt ne Warning, muss korrigiert werden!
-		new DataBaseLoader(MOVEMENTPATH);
-	}
-
-	// Use this for initialization
-	public DataBaseLoader (string type) 
-	{
-		string endPath = PATH + type;
-		switch (type)
-		{
-			case SHIPPATH:
-				shipLoad(endPath);
-			break;
-			case CREWPATH:
-				crewLoad(endPath);
-			break;
-			case WEAPONPATH:
-				weaponLoad(endPath);
-			break;
-			case TECHPATH:
-				techLoad(endPath);
-			break;
-			case SHIPABILITYPATH:
-				shipAbilityLoad(endPath);
-			break;
-			case CAPTAINPATH:
-				captainLoad(endPath);
-			break;
-			case CAPTAINUPGRADEPATH:
-				captainUpgradeLoad(endPath);
-			break;
-			case MOVEMENTPATH:
-				movementLoad(endPath);
-			break;
-			default:
-				Debug.Log("DataBaseLoader kann die angegebene Datenbank nicht finden!");
-			break;
-		}
-	}*/
-
 	/**
 	 * Gibt alle Schiffe als ShipCollection zurück
 	 * 
@@ -135,3 +92,44 @@ public class DataBaseLoader : MonoBehaviour{
 		return MovementCollection.Load(path);
 	}
 }
+
+/*void Start ()
+	{
+		new DataBaseLoader(MOVEMENTPATH);
+	}
+
+	// Use this for initialization
+	public DataBaseLoader (string type) 
+	{
+		string endPath = PATH + type;
+		switch (type)
+		{
+			case SHIPPATH:
+				shipLoad(endPath);
+			break;
+			case CREWPATH:
+				crewLoad(endPath);
+			break;
+			case WEAPONPATH:
+				weaponLoad(endPath);
+			break;
+			case TECHPATH:
+				techLoad(endPath);
+			break;
+			case SHIPABILITYPATH:
+				shipAbilityLoad(endPath);
+			break;
+			case CAPTAINPATH:
+				captainLoad(endPath);
+			break;
+			case CAPTAINUPGRADEPATH:
+				captainUpgradeLoad(endPath);
+			break;
+			case MOVEMENTPATH:
+				movementLoad(endPath);
+			break;
+			default:
+				Debug.Log("DataBaseLoader kann die angegebene Datenbank nicht finden!");
+			break;
+		}
+	}*/

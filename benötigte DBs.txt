@@ -17,16 +17,16 @@ Welche Datenbanken brauchen wir?
 
 Projektplan: 
 *erledigt* Prio 1:
-*erledigt* Datenbankschnittstelle (auslesen)
+100% Datenbankschnittstelle (auslesen)
 
-*erledigt* Datenbanken komplett strukturieren
+100% Datenbanken komplett strukturieren
 
-*erledigt* Struktur angepasst. 
+100% Struktur angepasst. 
 
 Prio 2: 
-Thomas: 0% Flottendatenbank
+Thomas: 100% Flottendatenbank (XML Export-Datei (Beispiel: <fleetList><fleet id="01" name="Beispielflotte"><ship id="01"><card id="01" /> <card id="02" /></ship></fleet></fleetList>))
 
-Thomas: 0% Schnittstelle für Flottendatenbank
+Thomas: 20% Schnittstelle für Flottendatenbank
 
 Thomas: 0% Menü zum Fleet Manager (Zugriff auf Datenbank)
 
@@ -40,6 +40,9 @@ Prio 4:
 
 Prio 5:
 - 0,1% Datenbanken mit Daten füllen
+
+Prio 6:
+- Import/Export der Flotten aus dem Flotten-Manager
 
 
 Übersicht Reaktionen:

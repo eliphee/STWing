@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fleetList>
+  <fleet fleetID="01" name="test">
+    <ship shipID="01" fleetShip="1">
+    </ship>
+  </fleet>
+  <fleet fleetID="02" name="bla">
+    <ship shipID="01" fleetShip="1">
+      <card cardID="01" shipCard="1" />
+    </ship>
+    <ship shipID="02" fleetShip="3">
+    </ship>
+  </fleet>
+  <fleet fleetID="04" name="test2">
+    <ship shipID="01" fleetShip="1">
+    </ship>
+    <ship shipID="02" fleetShip="2">
+    </ship>
+  </fleet>
+</fleetList>
