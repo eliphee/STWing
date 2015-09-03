@@ -196,7 +196,7 @@ public class PlayerDataHelper : MonoBehaviour {
 	public void changeFleetName(string _fleetID, string _newName)
 	{
 		XDocument fleetDB = loadFleetDB();
-		selectElement(fleetDB, _fleetID).Attribute("name").SetValue(_newName);
+		selectElement(fleetDB, _fleetID).SetAttributeValue("name", _newName);
 		saveFleetDB(fleetDB);
 	}
 
