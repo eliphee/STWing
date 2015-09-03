@@ -26,9 +26,9 @@ Projektplan:
 Prio 2: 
 Thomas: 100% Flottendatenbank (XML Export-Datei (Beispiel: <fleetList><fleet id="01" name="Beispielflotte"><ship id="01"><card id="01" /> <card id="02" /></ship></fleet></fleetList>))
 
-Thomas: 20% Schnittstelle für Flottendatenbank
+Thomas: 100% Schnittstelle für Flottendatenbank
 
-Thomas: 0% Menü zum Fleet Manager (Zugriff auf Datenbank)
+Thomas: 5% Menü zum Fleet Manager (Zugriff auf Datenbank)
 
 Prio 3:
 Marcel: Vollständige Implementierung der Schiffsbewegung und dazugehörigen Menüs
