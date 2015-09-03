@@ -1,0 +1,52 @@
+Welche Datenbanken brauchen wir?
+// XML  (Wird in Spieleordner unter "Data" gespeichert)
+- *ready* Schiffsdatenbank (Schiffsvalues mit Basiswerten)
+- *angelegt* Kartendatenbanken (Kartentyp, Karteneffekt)
+	- Schiffsdatenbank (Spezialf‰higkeit des Schiffs als Karteneffekt)
+	- Captains
+	- TechUpgrades
+	- Weapons
+	- Crew
+- *angelegt* MovementPatterns (Die zu einem Schiff gehˆrige zusammenstellung von MovePatterns)
+
+
+// Ingame-SQL? (wird in Spieleordner unter "Player" gespeichert)
+- Flottendatenbank / Spieler (Spieler-ID, Schiff, Karten)
+!!- Savegame-DB (Spielfeldgrˆﬂe, Position der Schiffe, Spieler des Schiffs, Schiffstypen und Karten, so wie Besch‰digungen -> sehr groﬂe DB, mit allen Daten!)
+
+
+Projektplan: 
+*erledigt* Prio 1:
+100% Datenbankschnittstelle (auslesen)
+
+100% Datenbanken komplett strukturieren
+
+100% Struktur angepasst. 
+
+Prio 2: 
+Thomas: 100% Flottendatenbank (XML Export-Datei (Beispiel: <fleetList><fleet id="01" name="Beispielflotte"><ship id="01"><card id="01" /> <card id="02" /></ship></fleet></fleetList>))
+
+Thomas: 20% Schnittstelle f¸r Flottendatenbank
+
+Thomas: 0% Men¸ zum Fleet Manager (Zugriff auf Datenbank)
+
+Prio 3:
+Marcel: Vollst‰ndige Implementierung der Schiffsbewegung und dazugehˆrigen Men¸s
+
+???: Main Men¸
+
+Prio 4: 
+???: Kompletter Rundenablauf/Netzwerkcode (Wir versuchen ein Broadcast (via UDP?) an alle Spieler, bei jeder Aktion) (Jeder kann dann speichern und das Spiel erneut laden)
+
+Prio 5:
+- 0,1% Datenbanken mit Daten f¸llen
+
+Prio 6:
+- Import/Export der Flotten aus dem Flotten-Manager
+
+
+‹bersicht Reaktionen:
+Spieler 2: Set Card ready
+Spieler 1: Move
+Spieler 2: Darf reagieren, wird dar¸ber informiert, dass Aktion A genutzt werden kann -> Spieler 1 wird informiert, dass Spieler 2 reagieren darf (einfacher Infoscreen)
+
