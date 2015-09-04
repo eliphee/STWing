@@ -33,6 +33,7 @@ public class Ship
 	public int shields;
 	public int shieldsInactive;
 	public int shieldsCurrent;
+	public CritialDamageEffect[] criticalDamage;
 
 	// Costs
 	public int squadronPoints;
@@ -47,6 +48,9 @@ public class Ship
 	// Action Bar
 	//private List<Action> shipActionBar;
 
+	// Captain Skill
+	// Can be modified by CAPTAIN, ADMIRAL, CREW, CRITDAMAGE
+	public int captainSkill;
 
 	public Maneuver[] maneuvers { get; private set; }
 

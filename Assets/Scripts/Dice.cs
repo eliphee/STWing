@@ -12,7 +12,11 @@ public class Dice : MonoBehaviour
 	public const int DefBS 		= 1;
 	public const int DefMiss 	= 0;
 
-	public int RollAttack() 
+	/// <summary>
+	/// Rolls one attack die.
+	/// </summary>
+	/// <returns>The attack die result.</returns>
+	public int RollAttackDie() 
 	{
 		int result = Random.Range (1, 7);
 		if (result < 3) {
@@ -26,7 +30,11 @@ public class Dice : MonoBehaviour
 		}
 	}
 
-	public int RollDefense()
+	/// <summary>
+	/// Rolls one defense die.
+	/// </summary>
+	/// <returns>The defense die result.</returns>
+	public int RollDefenseDie()
 	{
 		int result = Random.Range (1, 7);
 		if (result < 4) {
@@ -35,6 +43,60 @@ public class Dice : MonoBehaviour
 			return Dice.DefBS;
 		} else {
 			return Dice.DefEvade;
+		}
+	}
+
+	/// <summary>
+	/// Rolls an amount of attack dice.
+	/// </summary>
+	/// <param name="rollAmount">Amount of dice to be rolled.</param>
+	/// <param name="resultHit">Amount of HIT results.</param>
+	/// <param name="resultCrit">Amount of CRIT results.</param>
+	/// <param name="resultBS">Amount of BATTLESTATION results.</param>
+	/// <param name="resultMiss">Amount of MISSES.</param>
+	public void RollAttack(int rollAmount, out int resultHit, out int resultCrit, out int resultBS, out int resultMiss)
+	{
+		while (rollAmount > 0) {
+			switch (RollAttackDie ()) {
+			case AtkCrit:
+				resultCrit++;
+				break;
+			case AtkHit:
+				resultHit++;
+				break;
+			case AtkBS:
+				resultBS++;
+				break;
+			case AtkMiss:
+				resultMiss++;
+				break;
+			}
+			rollAmount--;
+		}
+	}
+
+	/// <summary>
+	/// Rolls an amount of defense dice.
+	/// </summary>
+	/// <param name="rollAmount">Amount of dice to be rolled.</param>
+	/// <param name="resultEvade">Amount of EVADE results.</param>
+	/// <param name="resultBS">Amount of BATTLESTATION results.</param>
+	/// <param name="resultMiss">Amount of MISSES.</param>
+	public void RollDefense(int rollAmount, out int resultEvade, out int resultBS, out int resultMiss)
+	{
+		while (rollAmount > 0) {
+			switch (RollDefenseDie ()) {
+			case DefEvade:
+				resultEvade++;
+				break;
+			case DefBS:
+				resultBS++;
+				break;
+			case DefMiss:
+				resultMiss++;
+				break;
+			}
+			rollAmount--;
 		}
 	}
 }

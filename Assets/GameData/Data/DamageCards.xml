@@ -3,10 +3,10 @@
 	Effect Functions:
 		ModifyCaptainSkill 			(target, modType, modAmount)
 									(Example: "AttachedShip", "Reduce/Add/Set", "0-99")
-		SufferDamage				(damageAmount, damageTarget)
-									(Example: "1", "AttachedShip/AttachedShipHull/AttachedShipShields")
-		SufferDamageOnAttackRole 	(rollAmount, rollTrigger, damageAmount, damageTarget)
-									(Example: "1", "Hit", "1", "AttachedShip/AttachedShipHull/AttachedShipShields")
+		DealDamage					(target, amountHit, amountCrit)
+									(Example: "AttachedShip/AttachedShipHull/AttachedShipShields", "1")
+		DealDamageOnAttackRoll	 	(target, rollAmount, rollTrigger)
+									(Example: "AttachedShip/AttachedShipHull/AttachedShipShields", "1", "Hit")
 		FlipDamageCard				(rollAmount, rollTrigger)
 									(Example: "0/1", "[blank]/Hit/Hit,Crit")
 		LockActionBar				(target)
@@ -74,13 +74,12 @@
 					<delay>NextRound</delay>
 					<phase>CombatPhase</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShipHull" />
 					</effect>
-					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+					<text>At the start of the Combat phase, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
 				<ability>
 					<activation>Action</activation>
@@ -103,13 +102,12 @@
 					<delay>NextRound</delay>
 					<phase>CombatPhase</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShipHull" />
 					</effect>
-					<text>Starting the round after you receive this card, treat your Captain's Skill value as "0".</text>
+					<text>At the start of the Combat phase, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
 				<ability>
 					<activation>Action</activation>
@@ -184,9 +182,9 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Suffer 1 additional damage and then flip this card face down.</text>
 				</ability>
@@ -211,9 +209,9 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Suffer 1 additional damage and then flip this card face down.</text>
 				</ability>
@@ -238,9 +236,9 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Suffer 1 additional damage and then flip this card face down.</text>
 				</ability>
@@ -265,9 +263,9 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Suffer 1 additional damage and then flip this card face down.</text>
 				</ability>
@@ -311,6 +309,7 @@
 					<phase>All</phase>
 					<trigger>None</trigger>
 					<effect name="ModifyShipManeuvers">
+						<property name="target" value="AttachedShip" />
 						<property name="targetBearing" value="Turn" />
 						<property name="targetSpeed" value="All" />
 						<property name="ChangeDifficultyTo" value="Red" />
@@ -377,9 +376,9 @@
 					<delay>None</delay>
 					<phase>All</phase>
 					<trigger>OverlapObstacle,OverlapShip</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Whenever you execute a Maneuver that caused you to overlap either another ship or an Obstacle Token, suffer 1 damage.</text>
 				</ability>
@@ -393,9 +392,9 @@
 					<delay>None</delay>
 					<phase>All</phase>
 					<trigger>OverlapObstacle,OverlapShip</trigger>
-					<effect name="SufferDamage">
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
+					<effect name="DealDamage">
+						<property name="target" value="AttachedShip" />
+						<property name="amountHit" value="1" />
 					</effect>
 					<text>Whenever you execute a Maneuver that caused you to overlap either another ship or an Obstacle Token, suffer 1 damage.</text>
 				</ability>
@@ -409,11 +408,10 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
 					</effect>
 					<text>Immediately roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
@@ -438,11 +436,10 @@
 					<delay>None</delay>
 					<phase>Instant</phase>
 					<trigger>None</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
 					</effect>
 					<text>Immediately roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
@@ -467,11 +464,10 @@
 					<delay>None</delay>
 					<phase>All</phase>
 					<trigger>RedManeuver</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
 					</effect>
 					<text>After executing a Red Maneuver, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
@@ -485,11 +481,10 @@
 					<delay>None</delay>
 					<phase>All</phase>
 					<trigger>RedManeuver</trigger>
-					<effect name="SufferDamageOnAttackRole">
+					<effect name="DealDamageOnAttackRoll">
+						<property name="target" value="AttachedShip" />
 						<property name="rollAmount" value="1" />
 						<property name="rollTrigger" value="Hit" />
-						<property name="damageAmount" value="1" />
-						<property name="damageTarget" value="AttachedShip" />
 					</effect>
 					<text>After executing a Red Maneuver, roll 1 attack die.%nOn a %ch result, suffer 1 damage.</text>
 				</ability>
