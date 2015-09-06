@@ -60,6 +60,38 @@ public class PlayerDataHelper : MonoBehaviour {
 		return importDB;
 	}
 
+	public List<XElement> loadFleets()
+	{
+		List<XElement> fleets = new List<XElement>();
+		XDocument fleetDB = loadFleetDB();
+		foreach(XElement singleFleet in fleetDB.Elements().Elements())
+		{
+			fleets.Add(singleFleet);
+		}
+		return fleets;
+	}
+
+	public List<XElement> loadShips(string _fleetID)
+	{
+		List<XElement> ships = new List<XElement>();
+		XDocument fleetDB = loadFleetDB();
+		foreach(XElement singleShip in selectElement(fleetDB, _fleetID).Elements())
+		{
+			ships.Add(singleShip);
+		}
+		return ships;
+	}
+
+	public List<XElement> loadCards(string _fleetID, string _shipID)
+	{
+		List<XElement> cards = new List<XElement>();
+		XDocument fleetDB = loadFleetDB();
+		foreach(XElement singleCard in selectElement(fleetDB, _fleetID, _shipID).Elements())
+		{
+			cards.Add(singleCard);
+		}
+		return cards;
+	}
 
 	////
 	// AB HIER FERTIG! (Hinzufügen, laden, speichern, löschen, umbenennen)
@@ -199,18 +231,83 @@ public class PlayerDataHelper : MonoBehaviour {
 		selectElement(fleetDB, _fleetID).SetAttributeValue("name", _newName);
 		saveFleetDB(fleetDB);
 	}
-
-	///////
-	/// Private Methoden
-	///////
+	
+	/**
+	 * Selektiert das durch die Flotten-ID angeforderte Flottenelement und gibt es als XElement zurück.
+	 * 
+	 * _fleetDB: Die zu durchsuchende DB
+	 * _fleetID: Die zu suchende Flotten-ID
+	 */
+	public XElement selectElement(XDocument _fleetDB, string _fleetID)
+	{
+		foreach(XElement singleFleet in _fleetDB.Elements().Elements())
+		{
+			if(singleFleet.Attribute("fleetID").Value == _fleetID)
+			{
+				return singleFleet;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Selektiert das durch die Flotten-ID und Schiff-ID angeforderte Schiffselement und gibt es als XElement zurück.
+	 * 
+	 * _fleetDB: Die zu durchsuchende DB
+	 * _fleetID: Die zu suchende Flotten-ID
+	 * _fleetShipID: Die zu suchende Schiffs-ID
+	 */
+	public XElement selectElement(XDocument _fleetDB, string _fleetID, string _fleetShipID)
+	{
+		if(check (selectElement(_fleetDB, _fleetID)))
+		{
+			foreach(XElement singleShip in selectElement(_fleetDB, _fleetID).Elements())
+			{
+				//Prüft ob die FlottenID dem aktuellen Element entspricht
+				if(singleShip.Attribute("fleetShip").Value == _fleetShipID)
+				{
+					return singleShip;
+				}
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Selektiert das durch die Flotten-ID, Schiff-ID und Card-ID angeforderte Kartenelement und gibt es als XElement zurück.
+	 * 
+	 * _fleetDB: Die zu durchsuchende DB
+	 * _fleetID: Die zu suchende Flotten-ID
+	 * _fleetShipID: Die zu suchende Schiffs-ID
+	 * _shipCard: Die gesuchte Karten-ID
+	 */
+	public XElement selectElement(XDocument _fleetDB, string _fleetID, string _fleetShipID, string _shipCard)
+	{
+		if(check (selectElement(_fleetDB, _fleetID, _fleetShipID)))
+		{
+			foreach(XElement singleCard in selectElement(_fleetDB, _fleetID, _fleetShipID).Elements())
+			{
+				//Prüft ob die FlottenID dem aktuellen Element entspricht
+				if(singleCard.Attribute("shipCard").Value == _shipCard)
+				{
+					return singleCard;
+				}							
+			}
+		}
+		return null;
+	}
 
 	/**
 	 * Lädt die aktuell existierende "fleets.xml" und gibt diese als XmlDocument zurück
 	 */
-	private XDocument loadFleetDB()
+	public XDocument loadFleetDB()
 	{
 		return XDocument.Load(PATH);
 	}
+
+	///////
+	/// Private Methoden
+	///////
 	
 	/**
 	 * Speichert das übergebene XDocument auf den Fleet-DB Pfad
@@ -272,71 +369,6 @@ public class PlayerDataHelper : MonoBehaviour {
 		}
 		
 		saveFleetDB(_fleetDB);
-	}
-
-	/**
-	 * Selektiert das durch die Flotten-ID angeforderte Flottenelement und gibt es als XElement zurück.
-	 * 
-	 * _fleetDB: Die zu durchsuchende DB
-	 * _fleetID: Die zu suchende Flotten-ID
-	 */
-	private XElement selectElement(XDocument _fleetDB, string _fleetID)
-	{
-		foreach(XElement singleFleet in _fleetDB.Elements().Elements())
-		{
-			if(singleFleet.Attribute("fleetID").Value == _fleetID)
-			{
-				return singleFleet;
-			}
-		}
-		return null;
-	}
-	
-	/**
-	 * Selektiert das durch die Flotten-ID und Schiff-ID angeforderte Schiffselement und gibt es als XElement zurück.
-	 * 
-	 * _fleetDB: Die zu durchsuchende DB
-	 * _fleetID: Die zu suchende Flotten-ID
-	 * _fleetShipID: Die zu suchende Schiffs-ID
-	 */
-	private XElement selectElement(XDocument _fleetDB, string _fleetID, string _fleetShipID)
-	{
-		if(check (selectElement(_fleetDB, _fleetID)))
-		{
-			foreach(XElement singleShip in selectElement(_fleetDB, _fleetID).Elements())
-			{
-				//Prüft ob die FlottenID dem aktuellen Element entspricht
-				if(singleShip.Attribute("fleetShip").Value == _fleetShipID)
-				{
-					return singleShip;
-				}
-			}
-		}
-		return null;
-	}
-	
-	/**
-	 * Selektiert das durch die Flotten-ID, Schiff-ID und Card-ID angeforderte Kartenelement und gibt es als XElement zurück.
-	 * 
-	 * _fleetDB: Die zu durchsuchende DB
-	 * _fleetID: Die zu suchende Flotten-ID
-	 * _fleetShipID: Die zu suchende Schiffs-ID
-	 * _shipCard: Die gesuchte Karten-ID
-	 */
-	private XElement selectElement(XDocument _fleetDB, string _fleetID, string _fleetShipID, string _shipCard)
-	{
-		if(check (selectElement(_fleetDB, _fleetID, _fleetShipID)))
-		{
-			foreach(XElement singleCard in selectElement(_fleetDB, _fleetID, _fleetShipID).Elements())
-			{
-				//Prüft ob die FlottenID dem aktuellen Element entspricht
-				if(singleCard.Attribute("shipCard").Value == _shipCard)
-				{
-					return singleCard;
-				}							
-			}
-		}
-		return null;
 	}
 	
 	/**

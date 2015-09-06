@@ -8,7 +8,7 @@
     <ship shipID="01" fleetShip="1">
       <card cardID="01" shipCard="1" />
     </ship>
-    <ship shipID="02" fleetShip="3">
+    <ship shipID="02" fleetShip="2">
     </ship>
   </fleet>
   <fleet fleetID="3" name="müsste 2 sein">
