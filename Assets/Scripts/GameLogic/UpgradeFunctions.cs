@@ -42,6 +42,7 @@ public class UpgradeFunctions : MonoBehaviour {
 				break;
 			default:
 				Debug.LogError("Modification type '" + modType + "' not recognized.");
+				break;
 		}
 
 	}
@@ -87,13 +88,41 @@ public class UpgradeFunctions : MonoBehaviour {
 	}
 
 
-	public void DealDamageOnAttackRoll(Ship target, int rollAmount,  string rollTrigger)
+	public void DealDamageOnAttackRoll(Ship target, int rollAmount,  string rollTrigger, bool inflictCrits)
 	{
 		int resultHit, resultCrit, resultBS, resultMiss;
+		int amountHit = 0, amountCrit = 0;
 		Dice d = new Dice ();
-		d.RollAttack (rollAmount, resultHit, resultCrit, resultBS, resultMiss);
+		d.RollAttack (rollAmount, out resultHit, out resultCrit, out resultBS, out resultMiss);
 
-		string[] trigger = rollTrigger.Split (",");
+		if (rollTrigger.Contains ("Hit"))
+		{
+			// Add rolled HIT-results to total HIT-damage
+			amountHit += resultHit;
+		}
+
+		if (rollTrigger.Contains("Critical"))
+		{
+			if (inflictCrits)
+			{
+				// Add rolled CRITICAL-results to total CRITITAL-damage
+				amountCrit += resultCrit;
+			}
+			else
+			{
+				// Add rolled CRITIAL-results to total HIT-damage (convert CRITICALS to HITS)
+				amountHit += resultCrit;
+			}
+		}
+
+		if (rollTrigger.Contains("BattleStations"))
+		{
+			// Add rolled BATTLESTATIONS-results to total HIT-damage
+			amountHit += resultBS;
+		}
+
+		// Call DealDamage-method for damage handling
+		DealDamage (target, amountHit, amountCrit);
 	}
 
 	/// <summary>

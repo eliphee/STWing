@@ -56,6 +56,11 @@ public class Dice : MonoBehaviour
 	/// <param name="resultMiss">Amount of MISSES.</param>
 	public void RollAttack(int rollAmount, out int resultHit, out int resultCrit, out int resultBS, out int resultMiss)
 	{
+		resultHit = 0;
+		resultCrit = 0;
+		resultBS = 0;
+		resultMiss = 0;
+
 		while (rollAmount > 0) {
 			switch (RollAttackDie ()) {
 			case AtkCrit:
@@ -84,6 +89,10 @@ public class Dice : MonoBehaviour
 	/// <param name="resultMiss">Amount of MISSES.</param>
 	public void RollDefense(int rollAmount, out int resultEvade, out int resultBS, out int resultMiss)
 	{
+		resultEvade = 0;
+		resultBS = 0;
+		resultMiss = 0;
+
 		while (rollAmount > 0) {
 			switch (RollDefenseDie ()) {
 			case DefEvade:
